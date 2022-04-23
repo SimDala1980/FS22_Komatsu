@@ -1,20 +1,70 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="61">
+<modDesc descVersion="63">
     <author>SimDala</author>
-    <version>1.2.0.0</version>
+    <version>1.3.0.0</version>
     <title>
-        <en>Komatsu forestry machines</en>
+        <en>Komatsu Forestry Machines</en>
     </title>
     <description>
-        <en>Komatsu forwarder 875 and harvester XC 931</en>
-        <de>Komatsu forwarder 875 and harvester XC 931</de>
-        <fr>Komatsu forwarder 875 and harvester XC 931</fr>
+        <en><![CDATA[Komatsu forwarder 875 and harvester XC 931
+ChangeLog 1.1.0.0
+- New grapple functionality
+- New in cabin view follows crane
+
+changeLog 1.2.0.0
+- Updated crane functionality
+- Updated driving forces
+
+Changelog 1.3.0.0
+- Updated crane functionality
+]]></en>
+        <de><![CDATA[Komatsu forwarder 875 and harvester XC 931
+ChangeLog 1.1.0.0
+- Neue Greiferfunktionalität
+- Neu in der Kabinenansicht folgt Kran
+
+ChangeLog 1.2.0.0
+- Aktualisierte Kranfunktionalität
+- Aktualisierte Antriebskräfte
+
+Changelog 1.3.0.0
+- Aktualisierte Kranfunktionalität]]></de>
+        <fr><![CDATA[Komatsu forwarder 875 and harvester XC 931]]></fr>
     </description>
+	
+		<l10n>
+		<text name="BladeGrill">
+            <de>Stützfuß, Grill Montiert</de>
+            <en>Blade, Guard</en>
+        </text>   
+		<text name="NoBladeNoGrill">
+            <de>Stützfuß, Grill Entfernt</de>
+            <en>Blade, Guard Removed</en>
+        </text> 
+		<text name="BladeNoGrill">
+            <de>Stützfuß, Kein Grill</de>
+            <en>Blade, No Guard</en>
+        </text>   
+		<text name="NoBladeWithGrill">
+            <de>Grill, Kein Stützfuß</de>
+            <en>Guard, No Blade</en>
+        </text> 
+	</l10n>
+	
     <iconFilename>xc931/store_xc931.dds</iconFilename>
     <multiplayer supported="true" />
 
     <storeItems>
-		<storeItem xmlFilename="forwarder875/forwarder875.xml" />
-        <storeItem xmlFilename="xc931/xc931.xml" />
-    </storeItems>
+		<storeItem rootNode="vehicle" xmlFilename="forwarder875/forwarder875.xml" />
+        <storeItem rootNode="vehicle" xmlFilename="xc931/xc931.xml" />
+		<storeItem rootNode="vehicle" xmlFilename="forwarder895/forwarder895.xml"/>
+     </storeItems>
+	
+	<vehicleTypes>
+		<type name="AutoLoadWoodkomatsu" parent="forwarder" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+			<specialization name="foldable" />
+			<specialization name="dynamicMountAttacher" />
+			<!-- <specialization name="autoLoadWood2" /> -->
+		</type>
+	</vehicleTypes>
 </modDesc>

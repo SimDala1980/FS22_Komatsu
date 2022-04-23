@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+<i3D name="forwarder875" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+    <Asset>
+        <Export program="GIANTS Editor 64bit" version="9.0.1"/>
+    </Asset>
+    <Files>
+        <File fileId="4" filename="$data/shaders/glowShader.xml"/>
+        <File fileId="2" filename="$data/shared/default_normal.png"/>
+        <File fileId="3" filename="$data/shared/default_vmask.png"/>
+        <File fileId="1" filename="$data/vehicles/komatsu/forwarder875/forwarder875Dashboard_diffuse.png"/>
+    </Files>
+    <Materials>
+        <Material name="forwarder875Dashboard_mat" materialId="32" customShaderId="4">
+            <Texture fileId="1"/>
+            <Normalmap fileId="2"/>
+            <Glossmap fileId="3"/>
+            <CustomParameter name="lightControl" value="0.3 0 0 0"/>
+        </Material>
+        <Material name="lambert1" materialId="4" diffuseColor="1 0 0 1"/>
+    </Materials>
+    <Shapes externalShapesFile="dashboard.i3d.shapes"/>
+    <Dynamics/>
+    <Scene>
+        <TransformGroup name="dashboards" nodeId="234">
+            <Shape shapeId="1" name="dashboardDisplay" translation="0 0 -1.54634" clipDistance="75" nodeId="235" materialIds="32" castsShadows="true" receiveShadows="true"/>
+            <TransformGroup name="numbers" translation="0 5.68434e-16 0" nodeId="236">
+                <TransformGroup name="numbersRpm" translation="-0.00196488 2.55794 1.04602" rotation="-34.2397 0 0" clipDistance="30" nodeId="237">
+                    <Shape shapeId="2" name="numberFloatDecal" translation="0.0209236 4.48454e-15 0.00108097" rotation="1.51076e-14 0 4.77083e-15" clipDistance="20" nodeId="238" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                    <Shape shapeId="3" name="numberOneDecal" translation="0.00697454 4.28317e-15 0.00108097" rotation="1.51076e-14 0 4.77083e-15" clipDistance="20" nodeId="239" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                    <Shape shapeId="4" name="numberTenDecal" translation="-0.00697454 3.3689e-15 0.00108097" rotation="1.51076e-14 0 4.77083e-15" clipDistance="20" nodeId="240" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                    <Shape shapeId="5" name="numberTen1Decal" translation="-0.0209236 -3.22811e-15 0.00108097" rotation="1.51076e-14 0 4.77083e-15" clipDistance="20" nodeId="241" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                </TransformGroup>
+                <TransformGroup name="numbersSpeed" translation="-0.0839212 2.55904 1.04527" rotation="-34.2397 0 0" clipDistance="30" nodeId="242">
+                    <Shape shapeId="6" name="numberFloatDecal" translation="0.0186321 -0.000173331 0.00162521" rotation="1.51076e-14 0 4.77083e-15" clipDistance="20" nodeId="243" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                    <Shape shapeId="7" name="numberOneDecal" translation="-0.0026588 -0.000173331 0.00162521" rotation="1.51076e-14 0 4.77083e-15" clipDistance="20" nodeId="244" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                    <Shape shapeId="8" name="numberTenDecal" translation="-0.0186321 -0.000173331 0.00162521" rotation="1.51076e-14 0 4.77083e-15" clipDistance="20" nodeId="245" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                    <Shape shapeId="9" name="dot" translation="0.00724052 -0.00815787 0.00162537" rotation="1.51076e-14 0 4.77083e-15" clipDistance="75" nodeId="246" materialIds="4" castsShadows="true" receiveShadows="true"/>
+                </TransformGroup>
+                <TransformGroup name="numbersOperatingTime" translation="0.089927 2.48271 1.09723" rotation="-34.2397 0 0" clipDistance="30" nodeId="247">
+                    <Shape shapeId="10" name="numberFloatDecal" translation="0.00702987 -0.00616907 0.00051207" rotation="1.51076e-14 0 4.77083e-15" clipDistance="20" nodeId="248" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                    <Shape shapeId="11" name="numberOneDecal" translation="-0.00100316 -0.00616907 0.00051207" rotation="1.51076e-14 0 4.77083e-15" clipDistance="20" nodeId="249" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                    <Shape shapeId="12" name="numberTenDecal" translation="-0.00702987 -0.00616907 0.00051207" rotation="1.51076e-14 0 4.77083e-15" clipDistance="20" nodeId="250" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                    <Shape shapeId="13" name="numberHunDecal" translation="-0.0130314 -0.00616907 0.00051207" rotation="1.51076e-14 0 4.77083e-15" clipDistance="20" nodeId="251" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                    <Shape shapeId="14" name="numberThoDecal" translation="-0.0189703 -0.00616907 0.00051207" rotation="1.51076e-14 0 4.77083e-15" clipDistance="20" nodeId="252" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                    <Shape shapeId="15" name="dot1" translation="0.00275839 -0.00932713 0.00162537" clipDistance="75" nodeId="253" materialIds="4" castsShadows="true" receiveShadows="true"/>
+                </TransformGroup>
+                <TransformGroup name="numbersTime" translation="0.114839 2.44729 1.12133" rotation="-34.2397 0 0" clipDistance="30" nodeId="254">
+                    <Shape shapeId="16" name="numberFloat2Decal" translation="0.00691477 -5.83692e-05 0.000352775" rotation="1.51076e-14 0 4.77083e-15" clipDistance="20" nodeId="255" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                    <Shape shapeId="17" name="numberFloat1Decal" translation="0.00383321 -4.77011e-05 0.000334359" rotation="1.51076e-14 0 4.77083e-15" clipDistance="20" nodeId="256" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                    <Shape shapeId="18" name="numberOneDecal" translation="-0.000547001 -4.77011e-05 0.000334359" rotation="1.51076e-14 0 4.77083e-15" clipDistance="20" nodeId="257" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                    <Shape shapeId="19" name="numberTenDecal" translation="-0.00383322 -4.77011e-05 0.000334359" rotation="1.51076e-14 0 4.77083e-15" clipDistance="20" nodeId="258" materialIds="4" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+                </TransformGroup>
+            </TransformGroup>
+        </TransformGroup>
+    </Scene>
+</i3D>

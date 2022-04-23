@@ -228,7 +228,7 @@
 
     <articulatedAxis rotNode="frontBackJoint" componentJointIndex="1" anchorActor="0" rotSpeed="-30" rotMax="40" rotMin="-40" customWheelIndices1="1 2 3 4" customWheelIndices2="5 6 7 8"/>
 
-    <powerConsumer ptoRpm="350" neededMinPtoPower="5" neededMaxPtoPower="40" useTurnOnState="false"/>
+    <powerConsumer ptoRpm="400" neededMinPtoPower="5" neededMaxPtoPower="40" useTurnOnState="false"/>
 
     <speedRotatingParts>
         <speedRotatingPart node="powerShaft01" wheelIndex="1" wheelScale="4"/>

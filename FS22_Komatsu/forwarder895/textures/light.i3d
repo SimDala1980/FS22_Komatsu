@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+<i3D name="forwarder875" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+    <Asset>
+        <Export program="GIANTS Editor 64bit" version="9.0.1"/>
+    </Asset>
+    <Files>
+        <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+        <File fileId="2" filename="$data/shared/default_normal.png"/>
+        <File fileId="3" filename="$data/vehicles/komatsu/forwarder875/forwarder875HeadLight_vmask.png"/>
+        <File fileId="12" filename="$data/vehicles/komatsu/forwarder875/forwarder875Interior_normal.png"/>
+        <File fileId="13" filename="$data/vehicles/komatsu/forwarder875/forwarder875Interior_vmask.png"/>
+        <File fileId="8" filename="$data/vehicles/komatsu/forwarder875/forwarder875Light2_normal.png"/>
+        <File fileId="9" filename="$data/vehicles/komatsu/forwarder875/forwarder875Light2_vmask.png"/>
+        <File fileId="10" filename="$data/vehicles/komatsu/forwarder875/forwarder875Light3_normal.png"/>
+        <File fileId="11" filename="$data/vehicles/komatsu/forwarder875/forwarder875Light3_vmask.png"/>
+    </Files>
+    <Materials>
+        <Material name="forwarder875HeadLight_mat1" materialId="15" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="staticLight">
+            <Normalmap fileId="2"/>
+            <Glossmap fileId="3"/>
+            <CustomParameter name="RDT" value="1 1 0 0"/>
+            <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+            <CustomParameter name="colorMat0" value="1 1 1 2"/>
+            <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+            <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+            <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+            <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+            <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+            <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+            <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+            <CustomParameter name="lightControl" value="0 0 0 0"/>
+            <CustomParameter name="blinkOffset" value="0 0 1 0"/>
+        </Material>
+        <Material name="forwarder875Interior_mat1" materialId="17" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="staticLight">
+            <Normalmap fileId="12"/>
+            <Glossmap fileId="13"/>
+            <CustomParameter name="RDT" value="1 1 0 0"/>
+            <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+            <CustomParameter name="colorMat0" value="1 1 1 2"/>
+            <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+            <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+            <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+            <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+            <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+            <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+            <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+            <CustomParameter name="lightControl" value="0 0 0 0"/>
+            <CustomParameter name="blinkOffset" value="0 0 1 0"/>
+        </Material>
+        <Material name="forwarder875Light2_mat1" materialId="23" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="staticLight">
+            <Normalmap fileId="8"/>
+            <Glossmap fileId="9"/>
+            <CustomParameter name="RDT" value="1 1 0 0"/>
+            <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+            <CustomParameter name="colorMat0" value="1 1 1 2"/>
+            <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+            <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+            <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+            <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+            <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+            <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+            <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+            <CustomParameter name="lightControl" value="0 0 0 0"/>
+            <CustomParameter name="blinkOffset" value="0 0 1 0"/>
+        </Material>
+        <Material name="forwarder875Light3_mat24" materialId="26" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="staticLight">
+            <Normalmap fileId="10"/>
+            <Glossmap fileId="11"/>
+            <CustomParameter name="RDT" value="1 1 0 0"/>
+            <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+            <CustomParameter name="colorMat0" value="1 1 1 2"/>
+            <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+            <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+            <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+            <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+            <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+            <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+            <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+            <CustomParameter name="lightControl" value="0 0 0 0"/>
+            <CustomParameter name="blinkOffset" value="0 0 1 0"/>
+        </Material>
+    </Materials>
+    <Shapes externalShapesFile="light.i3d.shapes"/>
+    <Dynamics/>
+    <Scene>
+        <TransformGroup name="staticLights" nodeId="159">
+            <Shape shapeId="1" name="frontLightsSelfIllumStatic" translation="0 1.29173 4.24697" clipDistance="75" nodeId="160" materialIds="15" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+            <Shape shapeId="2" name="workLightsBackSelfIllum01Static" translation="-7.62939e-08 3.62697 1.40311" clipDistance="75" nodeId="161" materialIds="23" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+            <Shape shapeId="3" name="workLightsFrontSelfIllumStatic" translation="0 3.45324 2.64108" clipDistance="75" nodeId="162" materialIds="26" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+            <Shape shapeId="4" name="interiorLightsSelfIllumStatic" translation="0 5.68434e-16 0" clipDistance="75" nodeId="163" materialIds="17" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+        </TransformGroup>
+    </Scene>
+</i3D>
