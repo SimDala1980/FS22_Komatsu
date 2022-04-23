@@ -2,7 +2,7 @@
 <sounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="$data/../shared/xml/schema/vehicle_sounds.xsd">
     <motorized>
         <sounds>
-            <motor template="engineLarge" file="$data/vehicles/claas/torion1914/sounds/torion1914_loop.gls" volumeScale="1.1"/>
+            <motor template="engineLarge" file="$data/vehicles/claas/torion1914/sounds/torion1914_loop.gls" volumeScale="1.4"/>
             <motor template="indoorCabinRumble" />
             <gearbox template="transmissionLarge" file="$data/sounds/vehicles/transmission/transmissionLoop.ogg" pitchScale="0.8" volumeScale="0.5"/>
             <!-- <compressedAir template="compressedAir"/> -->

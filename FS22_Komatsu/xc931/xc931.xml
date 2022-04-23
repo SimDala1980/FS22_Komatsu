@@ -34,18 +34,18 @@
         <sounds filename="xc931/sounds/xc931.xml"/>
         <size width="4" length="11.5" height="6" lengthOffset="0.3" />
         <components>
-            <component centerOfMass="0 0.7 2.0"    solverIterationCount="40" mass="4000"/>
-            <component centerOfMass="0 0.7 -2.0"   solverIterationCount="40" mass="7000"/>
+            <component centerOfMass="0 0.7 2.0"    solverIterationCount="40" mass="2500"/>
+            <component centerOfMass="0 0.7 -2.0"   solverIterationCount="30" mass="5500"/>
 
-            <component                             solverIterationCount="20" mass="2000"/>
-            <component                             solverIterationCount="20" mass="2000"/>
-            <component                             solverIterationCount="20" mass="2000"/>
-            <component                             solverIterationCount="20" mass="2000"/>
+            <component                             solverIterationCount="20" mass="3000"/>
+            <component                             solverIterationCount="20" mass="3000"/>
+            <component                             solverIterationCount="20" mass="3000"/>
+            <component                             solverIterationCount="20" mass="3000"/>
 
             <component                             solverIterationCount="20" mass="260"/>
             <component centerOfMass="0 0.4 0.3"    solverIterationCount="20" mass="210"/>
 
-            <joint component1="1" component2="2" node="frontBackJoint" rotLimit="0 0 0" transLimit="0 0 0" rotLimitSpring="0 0 240" rotLimitDamping="0 0 8" />
+            <joint component1="1" component2="2" node="frontBackJoint" rotLimit="0 0 0" transLimit="0 0 0" rotLimitSpring="0 0 100" rotLimitDamping="0 0 30" />
 
             <joint component1="1" component2="3" node="frontLeftBoggieJoint"  rotLimit="10 0 0" transLimit="0 0 0" />
             <joint component1="1" component2="4" node="frontRightBoggieJoint" rotLimit="10 0 0" transLimit="0 0 0" />
@@ -53,8 +53,9 @@
             <joint component1="2" component2="5" node="backLeftBoggieJoint"  rotLimit="10 0 0" transLimit="0 0 0" />
             <joint component1="2" component2="6" node="backRightBoggieJoint" rotLimit="10 0 0" transLimit="0 0 0" />
 
-            <joint component1="1" component2="7" node="cutterHolderColJoint" nodeActor1="cutterRotJoint" rotLimit="0 50 80" transLimit="0 0 0" zRotationNode="cutterHolderColJointZRot" rotDriveVelocity="0 0 0" maxRotDriveForce="1 1 1"  transLimitSpring="600 600 600" transLimitDamping="11 11 11"  enableCollision="true"/>
-            <joint component1="7" component2="8" node="cutterJoint" rotLimit="0 0 0" transLimit="0 0 0" />
+            <!-- <joint component1="1" component2="7" node="cutterHolderColJoint" nodeActor1="cutterRotJoint" rotLimit="0 50 80" rotLimitDamping="10 10 10" transLimit="0 0 0" zRotationNode="cutterHolderColJointZRot" rotDriveVelocity="0 0 0" maxRotDriveForce="1 1 1"  transLimitSpring="600 600 600" transLimitDamping="5 5 5"  enableCollision="true"/> -->
+			<joint component1="1" component2="7" node="cutterHolderColJoint" nodeActor1="cutterRotJoint" rotLimit="0 50 140" transLimit="0 0 0" zRotationNode="cutterHolderColJointZRot" rotLimitSpring="0 20 0" rotLimitDamping="0 50 0" rotDriveVelocity="0 0 0" maxRotDriveForce="1 1 1" transLimitSpring="600 600 600" transLimitDamping="11 11 11" enableCollision="true"/>
+              <joint component1="7" component2="8" node="cutterJoint" rotLimit="0 0 0" transLimit="0 0 0" />
         </components>
         <schemaOverlay attacherJointPosition="0 0" name="VEHICLE" />
         <mapHotspot type="HARVESTER" />
@@ -643,13 +644,13 @@
         </animation>
 
         <animation name="wiperFrontAnimation">
-            <part node="wiper" startTime="0.00" endTime="0.2"  startTrans="-0.112 1.475 0.678" endTrans="0.04 1.513 0.661"  startRot="0.0 0.0 0.0"    endRot="-1.177 0.0 0.0" />
-            <part node="wiper" startTime="0.2" endTime="0.40"  startTrans="0.04 1.513 0.661"   endTrans="0.31 1.566 0.632"  startRot="-1.177 0.0 0.0" endRot="-2.415 0.0 0.0" />
-            <part node="wiper" startTime="0.40" endTime="0.6"  startTrans="0.31 1.566 0.632"   endTrans="0.586 1.554 0.632" startRot="-2.415 0.0 0.0" endRot="-1.177 0.0 0.0" />
-            <part node="wiper" startTime="0.6" endTime="0.8"  startTrans="0.586 1.554 0.632"  endTrans="0.744 1.475 0.678" startRot="-1.177 0.0 0.0" endRot="0.0 0.0 0.0" />
+            <part node="wiper" startTime="0.0" endTime="0.4"  startTrans="-0.112 1.475 0.678" endTrans="0.04 1.513 0.661"  startRot="0.0 0.0 0.0"    endRot="-1.177 0.0 0.0" />
+            <part node="wiper" startTime="0.4" endTime="0.8"  startTrans="0.04 1.513 0.661"   endTrans="0.31 1.566 0.632"  startRot="-1.177 0.0 0.0" endRot="-2.415 0.0 0.0" />
+            <part node="wiper" startTime="0.8" endTime="1.2"  startTrans="0.31 1.566 0.632"   endTrans="0.586 1.554 0.632" startRot="-2.415 0.0 0.0" endRot="-1.177 0.0 0.0" />
+            <part node="wiper" startTime="1.2" endTime="1.6"  startTrans="0.586 1.554 0.632"  endTrans="0.744 1.475 0.678" startRot="-1.177 0.0 0.0" endRot="0.0 0.0 0.0" />
 
-            <sound template="wiper1" startTime="0" endTime="0.8" direction="1"  volumeScale="1.0" pitchScale="0.6" fadeOut="0.1" linkNode="wiper"/>
-            <sound template="wiper2" startTime="0" endTime="0.8" direction="-1" volumeScale="1.0" pitchScale="0.6" fadeOut="0.1" linkNode="wiper"/>
+            <sound template="wiper1" startTime="0" endTime="1.6" direction="1"  volumeScale="1.0" pitchScale="0.6" fadeOut="0.1" linkNode="wiper"/>
+            <sound template="wiper2" startTime="0" endTime="1.6" direction="-1" volumeScale="1.0" pitchScale="0.6" fadeOut="0.1" linkNode="wiper"/>
         </animation>
     </animations>
 

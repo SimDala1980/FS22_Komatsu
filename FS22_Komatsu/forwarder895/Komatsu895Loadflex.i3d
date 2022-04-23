@@ -22,6 +22,9 @@
     <File fileId="28" filename="textures/komatsu895Decals_diffuse.dds"/>
     <File fileId="53" filename="textures/textures/elephantKing_normal.dds"/>
     <File fileId="54" filename="textures/textures/elephantKing_specular.dds"/>
+    <File fileId="59" filename="textures/textures/raude.dds"/>
+    <File fileId="60" filename="textures/textures/raudeLoad.dds"/>
+    <File fileId="61" filename="textures/textures/raudeUnload.dds"/>
     <File fileId="5" filename="textures/vehicleShader.xml"/>
     <File fileId="33" filename="$data/shaders/decalShader.xml"/>
     <File fileId="22" filename="$data/shaders/glowShader.xml"/>
@@ -346,6 +349,9 @@
       <CustomParameter name="RDT" value="1 1 0 0"/>
       <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
     </Material>
+    <Material name="ID16" materialId="31">
+      <Texture fileId="59"/>
+    </Material>
     <Material name="lambert1" materialId="32" diffuseColor="1 0 0 1">
     </Material>
     <Material name="lambert1" materialId="33" diffuseColor="0.556863 0.556863 0.556863 1">
@@ -414,6 +420,12 @@
       <Normalmap fileId="10"/>
       <Glossmap fileId="17"/>
       <CustomParameter name="placeableColorScale" value="0 1 0 0"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="40">
+      <Texture fileId="60"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="41">
+      <Texture fileId="61"/>
     </Material>
     <Material name="window_mat" materialId="42" alphaBlending="true" customShaderId="11">
       <Texture fileId="24"/>
@@ -1092,7 +1104,10 @@
         <Shape shapeId="152" name="dynamicMountTrigger" translation="0 2.345 -3.15536" kinematic="true" trigger="true" collisionMask="16777216" nodeId="691" materialIds="8" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
         <TransformGroup name="autoLoadWood" translation="0.0069844 0.796059 -2.10623" rotation="0 -0 3.11298" nodeId="692"/>
         <TransformGroup name="transform" translation="-0.0151562 3.18691 -1.415" nodeId="693"/>
-     </Shape>
+        <Shape shapeId="153" name="MarkierungUnload" translation="-0.230774 0.9 -4.35871" rotation="0 90 0" visibility="false" nodeId="694" materialIds="31" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="154" name="plane" translation="1.8573 0 -4.64684" visibility="false" nodeId="695" materialIds="40" receiveShadows="true" distanceBlending="false"/>
+        <Shape shapeId="155" name="planeUnload" translation="-1.89748 0.6 -4.79526" rotation="0 90 0" visibility="false" nodeId="696" materialIds="41" receiveShadows="true" distanceBlending="false"/>
+      </Shape>
       <Shape shapeId="156" name="forwarder875_frontLeftAxis_component3" translation="1.05 0.771274 1.79367" dynamic="true" compound="true" collisionMask="2105410" clipDistance="300" nodeId="697" materialIds="33" castsShadows="true" receiveShadows="true" nonRenderable="true">
         <TransformGroup name="boggie_vis" nodeId="698">
           <TransformGroup name="crawlerLeftFrontWheel2" translation="0.153604 -0.124863 0.882" scale="1.05 1.1 1.1" nodeId="699"/>

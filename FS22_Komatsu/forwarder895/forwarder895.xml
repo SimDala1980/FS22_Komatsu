@@ -12,7 +12,7 @@
             <function>$l10n_function_forestryTransport</function>
         </functions>
         <image>forwarder895/komatsu895_store.dds</image>
-        <price>620000</price>
+        <price>284400</price>
         <lifetime>600</lifetime>
         <rotation>0</rotation>
         <brand>KOMATSU</brand>
@@ -534,7 +534,7 @@
         </differentialConfigurations>
 
         <motorConfigurations>
-            <motorConfiguration name="895 Tier 4 Final" hp="286" price="12400">
+            <motorConfiguration name="895 Stage 3" hp="286" price="0">
                 <motor torqueScale="3" minRpm="850" maxRpm="2200" maxForwardSpeed="21" maxBackwardSpeed="21" brakeForce="20" lowBrakeForceScale="0.2" rotInertia="0.004">
                     <torque normRpm="0.45" torque="1.6"/>
                     <torque normRpm="0.5" torque="0.97"/>
@@ -545,7 +545,7 @@
                 </motor>
                 <transmission minForwardGearRatio="14" maxForwardGearRatio="100" minBackwardGearRatio="14" maxBackwardGearRatio="100" name="$l10n_info_transmission_cvt"/>
             </motorConfiguration>
-            <motorConfiguration name="895 Stage 3Atune" hp="320" price="24000">
+            <motorConfiguration name="895 Tier 4 Tune Final" hp="320" price="24000">
                 <motor torqueScale="5.5" minRpm="950" maxRpm="2550" maxForwardSpeed="21" maxBackwardSpeed="21" brakeForce="20" lowBrakeForceScale="0.2" rotInertia="0.004">
                     <torque normRpm="0.45" torque="1.9"/>
                     <torque normRpm="0.5" torque="1.1"/>
@@ -559,7 +559,7 @@
         </motorConfigurations>
 
         <exhaustEffects>
-            <exhaustEffect node="exhaustParticle" filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.9 0.9 0.9 0.1" maxRpmColor="0.9 0.9 0.9 0.4" minRpmScale="0.05" maxRpmScale="0.5" />
+            <exhaustEffect node="exhaustParticle" filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.9 0.9 0.9 1" maxRpmColor="0.01 0.01 0.01 7.5" minRpmScale="0.15" maxRpmScale="0.55"/>
         </exhaustEffects>
 
         <!-- <brakeCompressor capacity="10000" fillSpeed="100" /> -->
@@ -653,12 +653,12 @@
             <!-- claws rotation -->
             <movingTool node="grabLeftComponentJoint" playSound="true" isConsumingPower="true">
                 <controls groupIndex="1" l10nName="label_arm" axis="AXIS_CRANE_TOOL" invertAxis="true" mouseSpeedFactor="1" iconName="GRABBER_OPEN_CLOSE"/>
-                <rotation rotSpeed="-120" rotAcceleration="300" rotMax="1" rotMin="-150" rotationAxis="3" startRot="-135"/>
+                <rotation rotSpeed="-120" rotAcceleration="300" rotMax="1" rotMin="-145" rotationAxis="3" startRot="-135"/>
                 <componentJoint index="7" anchorActor="0"/>
                 <dependentMovingTool node="grabRightComponentJoint" speedScale="1" />
             </movingTool>
             <movingTool node="grabRightComponentJoint" playSound="true" isConsumingPower="true">
-                <rotation groupIndex="1" l10nName="label_arm" rotSpeed="125" rotAcceleration="300" rotMax="150" rotMin="0" rotationAxis="3" startRot="135"/>
+                <rotation groupIndex="1" l10nName="label_arm" rotSpeed="125" rotAcceleration="300" rotMax="145" rotMin="0" rotationAxis="3" startRot="135"/>
                 <componentJoint index="8" anchorActor="0"/>
             </movingTool>
 
@@ -766,7 +766,7 @@
     <foldable>
         <foldingConfigurations>
             <foldingConfiguration>
-                <foldingParts startMoveDirection="1">
+                <foldingParts startMoveDirection="0">
                     <foldingPart animationName="folding" speedScale="1" />
                 </foldingParts>
             </foldingConfiguration>
