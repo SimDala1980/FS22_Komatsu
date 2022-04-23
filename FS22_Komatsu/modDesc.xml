@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="61">
+    <author>SimDala, GIANTS Software</author>
+    <version>1.1.0.0</version>
+    <title>
+        <en>Komatsu forestry machines</en>
+    </title>
+    <description>
+        <en>Komatsu forwarder 875 and harvester XC 931</en>
+        <de>Komatsu forwarder 875 and harvester XC 931</de>
+        <fr>Komatsu forwarder 875 and harvester XC 931</fr>
+    </description>
+    <iconFilename>xc931/store_xc931.dds</iconFilename>
+    <multiplayer supported="true" />
+
+    <storeItems>
+		<storeItem xmlFilename="forwarder875/forwarder875.xml" />
+        <storeItem xmlFilename="xc931/xc931.xml" />
+    </storeItems>
+</modDesc>
