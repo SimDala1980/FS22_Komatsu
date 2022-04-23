@@ -413,7 +413,7 @@
                 <controls axis="AXIS_CRANE_ARM2" invertAxis="false" mouseSpeedFactor="0.5" iconName="CRANE_EC_TRANSLATE_Y" />
             </movingTool>
             <movingTool node="scTargetNodeZ" isEasyControlTarget="true" isConsumingPower="true">
-                <controls axis="AXIS_CRANE_ARM3" invertAxis="true" mouseSpeedFactor="0.5" iconName="CRANE_EC_TRANSLATE_Z" />
+                <controls axis="AXIS_CRANE_ARM3" invertAxis="false" mouseSpeedFactor="0.5" iconName="CRANE_EC_TRANSLATE_Z" />
             </movingTool>
             
             <movingTool node="cabinRotYDummy" delayedNode="cabinRotY" playSound="true" isConsumingPower="true">
@@ -424,24 +424,25 @@
 
             <movingTool node="arm1Dummy" delayedNode="arm1" playSound="true" isConsumingPower="true">
                 <controls axis="AXIS_CRANE_ARM2" invertAxis="true" mouseSpeedFactor="0.5" iconName="CRANE_ARM1_ROTATE_X" />
-                <rotation rotSpeed="20" rotAcceleration="40" rotMax="-15.206" rotMin="-55" startRot="-45" rotationAxis="1" rotSendNumBits="9" />
+                <rotation rotSpeed="20" rotAcceleration="40" rotMax="20" rotMin="-75" startRot="-45" rotationAxis="1" rotSendNumBits="9" />
                 <componentJoint index="6" anchorActor="0"/>
             </movingTool>
             <movingTool node="arm2Dummy" delayedNode="arm2" playSound="true" isConsumingPower="true">
                 <controls axis="AXIS_CRANE_ARM3" invertAxis="true" mouseSpeedFactor="0.5" iconName="CRANE_ARM2_ROTATE_X" />
-                <rotation rotSpeed="30" rotAcceleration="80" rotMax="150" rotMin="40" startRot="110" rotationAxis="1" rotSendNumBits="10"/>
-                <componentJoint index="6" anchorActor="0"/>
+                <rotation rotSpeed="30" rotAcceleration="80" rotMax="150" rotMin="5" startRot="110" rotationAxis="1" rotSendNumBits="10"/>
+                <dependentMovingTool node="arm1Dummy" speedScale="-0.5" />
+				<componentJoint index="6" anchorActor="0"/>
             </movingTool>
 
             <!-- arm extension -->
             <movingTool node="arm3Dummy" delayedNode="arm3" playSound="true" isConsumingPower="true">
                 <controls axis="AXIS_CRANE_ARM4" invertAxis="false" mouseSpeedFactor="0.5" iconName="CRANE_ARM2_TRANSLATE" />
-                <translation transSpeed="0.7" transAcceleration="3" transMax="3.5" transMin="2.75" startTrans="2.766" translationAxis="3" />
+                <translation transSpeed="0.7" transAcceleration="3" transMax="3.55" transMin="2.75" startTrans="2.75" translationAxis="3" />
                 <componentJoint index="6" anchorActor="0"/>
                 <dependentMovingTool node="arm4Dummy" speedScale="1" />
             </movingTool>
             <movingTool node="arm4Dummy" delayedNode="arm4" playSound="true">
-                <translation transSpeed="0.7" transAcceleration="3" transMax="0.82" transMin="0" startTrans="0" translationAxis="3" />
+                <translation transSpeed="0.7" transAcceleration="3" transMax="0.8" transMin="0" startTrans="0" translationAxis="3" />
                 <componentJoint index="6" anchorActor="0"/>
             </movingTool>
 
@@ -614,9 +615,9 @@
         </movingParts>
 
         <dashboards>
-            <dashboard displayType="ROT" valueType="movingTool" node="joystickLeft" rotAxis="1" minRot="20" maxRot="-20" axis="AXIS_CRANE_ARM3" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ROT" valueType="movingTool" node="joystickLeft" rotAxis="1" minRot="-20" maxRot="20" axis="AXIS_CRANE_ARM3" doInterpolation="true" groups="MOTOR_ACTIVE"/>
             <dashboard displayType="ROT" valueType="movingTool" node="joystickLeft" rotAxis="3" minRot="20" maxRot="-20" axis="AXIS_CRANE_ARM"  doInterpolation="true" groups="MOTOR_ACTIVE"/>
-            <dashboard displayType="ROT" valueType="movingTool" node="joystickRight" rotAxis="1" minRot="-20" maxRot="20" axis="AXIS_CRANE_ARM2" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ROT" valueType="movingTool" node="joystickRight" rotAxis="1" minRot="20" maxRot="-20" axis="AXIS_CRANE_ARM2" doInterpolation="true" groups="MOTOR_ACTIVE"/>
             <dashboard displayType="ROT" valueType="movingTool" node="joystickRight" rotAxis="3" minRot="20" maxRot="-20" axis="AXIS_CRANE_TOOL2"  doInterpolation="true" groups="MOTOR_ACTIVE"/>
         </dashboards>
     </cylindered>
@@ -654,7 +655,7 @@
 
     <woodHarvester>
         <cutNode node="cutNode" attachNode="xc931_cutter_component8" attachReferenceNode="attachReference" sizeY="1.3" sizeZ="1.8" maxRadius="0.4" />
-        <cutLengths min="1" max="8" step="1.0" />
+        <cutLengths min="3.1" max="5.5" step="0.3" />
         <delimbNode node="sideCutNode" sizeX="0.1" sizeY="1.3" sizeZ="1.8" delimbOnCut="true" />
         <cutAnimation name="cutAnimation" speedScale="1" cutTime="0.5" />
         <grabAnimation name="grabberAnimation" speedScale="1" />

@@ -54,9 +54,10 @@
             <joint component1="2" component2="5" node="backLeftBoggieJoint"  rotLimit="15 0 0" transLimit="0 0 0" />
             <joint component1="2" component2="6" node="backRightBoggieJoint" rotLimit="15 0 0" transLimit="0 0 0" />
 
-            <joint component1="2" component2="7" node="clawColJoint" rotLimit="0 50 30" rotMinLimit="0 -50 -190" transLimit="0 0 0" maxRotDriveForce="0.5 0.5 0.5" nodeActor1="clawRotJointActor1" zRotationNode="clawColJointZRot" enableCollision="true" rotDriveVelocity="0 0 0" transLimitSpring="6000 6000 6000" transLimitDamping="100 100 100"/>
-            <joint component1="7" component2="8" node="grabLeftComponentJoint" rotLimitForceLimit="-1 -1 45" />
-            <joint component1="7" component2="9" node="grabRightComponentJoint" rotLimitForceLimit="-1 -1 45" />
+            <!-- <joint component1="2" component2="7" node="clawColJoint" rotLimit="0 50 30" rotMinLimit="0 -50 -190" transLimit="10 10 10" maxRotDriveForce="0.5 0.5 0.5" nodeActor1="clawRotJointActor1" zRotationNode="clawColJointZRot" enableCollision="true" rotDriveVelocity="0 0 0" transLimitSpring="6000 6000 6000" transLimitDamping="100 100 100"/> -->
+            <joint component1="2" component2="7" node="clawColJoint" rotLimitDamping="1000 1000 1000" />
+			<joint component1="7" component2="8" node="grabLeftComponentJoint" rotLimitForceLimit="-1 -1 60" />
+            <joint component1="7" component2="9" node="grabRightComponentJoint" rotLimitForceLimit="-1 -1 60" />
 
             <collisionPair component1="8" component2="9" enabled="false"/>
         </components>
@@ -599,9 +600,9 @@
         </movingParts>
 
         <dashboards>
-            <dashboard displayType="ROT" valueType="movingTool" node="joystickLeft" rotAxis="1" minRot="20" maxRot="-20" axis="AXIS_CRANE_ARM3" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ROT" valueType="movingTool" node="joystickLeft" rotAxis="1" minRot="-20" maxRot="20" axis="AXIS_CRANE_ARM3" doInterpolation="true" groups="MOTOR_ACTIVE"/>
             <dashboard displayType="ROT" valueType="movingTool" node="joystickLeft" rotAxis="3" minRot="20" maxRot="-20" axis="AXIS_CRANE_ARM"  doInterpolation="true" groups="MOTOR_ACTIVE"/>
-            <dashboard displayType="ROT" valueType="movingTool" node="joystickRight" rotAxis="1" minRot="-20" maxRot="20" axis="AXIS_CRANE_ARM2" doInterpolation="true" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ROT" valueType="movingTool" node="joystickRight" rotAxis="1" minRot="20" maxRot="-20" axis="AXIS_CRANE_ARM2" doInterpolation="true" groups="MOTOR_ACTIVE"/>
             <dashboard displayType="ROT" valueType="movingTool" node="joystickRight" rotAxis="3" minRot="20" maxRot="-20" axis="AXIS_CRANE_TOOL2"  doInterpolation="true" groups="MOTOR_ACTIVE"/>
         </dashboards>
     </cylindered>
