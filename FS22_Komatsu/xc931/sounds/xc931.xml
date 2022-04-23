@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<sounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="$data/../shared/xml/schema/vehicle_sounds.xsd">
+    <motorized>
+        <sounds>
+            <motor template="engineLarge" file="$data/vehicles/claas/torion1914/sounds/torion1914_loop.gls" volumeScale="1.1"/>
+            <motor template="indoorCabinRumble" />
+            <gearbox template="transmissionLarge" file="$data/sounds/vehicles/transmission/transmissionLoop.ogg" pitchScale="0.8" volumeScale="0.5"/>
+            <compressedAir template="compressedAir"/>
+            <airCompressorRun template="brakeCompressorLarge" />
+            <airCompressorStop template="compressedAir"/>
+            <reverseDrive template="KOMATSU_REVERSE_BEEP" />
+        </sounds>
+    </motorized>
+
+    <lights>
+        <sounds>
+            <toggleLights template="SWITCH_01"  />
+        </sounds>
+    </lights>
+
+    <attacherJoints>
+        <sounds>
+            <attach template="ATTACH_01" />
+            <hydraulic template="defaultHydraulicSound" />
+        </sounds>
+    </attacherJoints>
+    
+    <cylindered>
+        <sounds>
+            <hydraulic template="defaultHydraulicSound" />
+        </sounds>
+    </cylindered>
+
+    <drivable>
+        <sounds>
+            <waterSplash template="WATER_SPLASH_01" />
+        </sounds>
+    </drivable>
+    
+    <woodHarvester>
+        <sounds>
+            <delimb template="DEFAULT_TREE_DELIMB" linkNode="cutter" />
+            <cut template="DEFAULT_TREE_CUT" linkNode="cutter" />
+        </sounds>
+    </woodHarvester>
+
+    <honk>
+        <sound template="HONK_KOMATSU" linkNode="xc931_back_component2" />
+    </honk>
+</sounds>
