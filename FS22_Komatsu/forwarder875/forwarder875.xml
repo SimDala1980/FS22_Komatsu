@@ -463,7 +463,7 @@
 
             <movingTool node="mainArmPhysic" delayedNode="mainArm" playSound="true" isConsumingPower="true">
                 <controls axis="AXIS_CRANE_ARM2" invertAxis="true" mouseSpeedFactor="0.5" iconName="CRANE_ARM1_ROTATE_X" />
-                <rotation rotSpeed="20" rotAcceleration="40" rotMax="24" rotMin="-80" startRot="20" rotationAxis="1" rotSendNumBits="9" />
+                <rotation rotSpeed="30" rotAcceleration="40" rotMax="24" rotMin="-80" startRot="20" rotationAxis="1" rotSendNumBits="9" />
                 <componentJoint index="6" anchorActor="0"/>
             </movingTool>
             <movingTool node="secondArmPhysic" delayedNode="secondArm" playSound="true" isConsumingPower="true">
