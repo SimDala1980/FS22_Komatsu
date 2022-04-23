@@ -727,8 +727,8 @@
         <i3dMapping id="playerRightHandTarget" node="0>0|3|0|0|2|0" />
         <i3dMapping id="seatDecalsLight" node="0>0|3|0|0|5" />
         <i3dMapping id="indoorCamera" node="0>0|3|0|1" />
-        <i3dMapping id="outdoorCameraTarget" node="0>0|3|0|2" />
-        <i3dMapping id="outdoorCamera" node="0>0|3|0|2|0" />
+        <i3dMapping id="outdoorCameraTarget" node="0>0|3|6" />
+        <i3dMapping id="outdoorCamera" node="0>0|3|6|0" />
         <i3dMapping id="playerRightFootTarget" node="0>0|3|0|3|0" />
         <i3dMapping id="playerLeftFootTarget" node="0>0|3|0|3|1" />
         <i3dMapping id="wiperFrontArm01" node="0>0|3|1|0|0" />
