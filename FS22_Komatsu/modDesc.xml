@@ -4,6 +4,7 @@
     <version>1.4.0.0</version>
     <title>
         <en>Komatsu Forestry Machines</en>
+		<de>Komatsu-Forstmaschinen</de>
     </title>
     <description>
         <en><![CDATA[Komatsu forwarder 875 and harvester XC 931
@@ -17,6 +18,9 @@ changeLog 1.2.0.0
 
 Changelog 1.3.0.0
 - Updated crane functionality
+
+Changelog 1.4.0.0
+- Updated crane functionality, all machines similar to 895
 ]]></en>
         <de><![CDATA[Komatsu forwarder 875 and harvester XC 931
 ChangeLog 1.1.0.0
@@ -28,8 +32,11 @@ ChangeLog 1.2.0.0
 - Aktualisierte Antriebskräfte
 
 Changelog 1.3.0.0
-- Aktualisierte Kranfunktionalität]]></de>
-        <fr><![CDATA[Komatsu forwarder 875 and harvester XC 931]]></fr>
+- Aktualisierte Kranfunktionalität
+
+Änderungsprotokoll 1.4.0.0
+- Aktualisierte Kranfunktionalität, alle Maschinen ähnlich wie 895
+]]></de>
     </description>
 	
 		<l10n>
