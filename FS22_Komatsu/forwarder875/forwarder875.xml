@@ -457,18 +457,18 @@
 
             <movingTool node="armXRotPhysic" delayedNode="armXRot" playSound="true" isConsumingPower="true">
                 <controls axis="AXIS_CRANE_ARM" invertAxis="true" mouseSpeedFactor="0.6" iconName="CRANE_ARM1_ROTATE_Y" />
-                <rotation rotSpeed="30" rotAcceleration="50" rotMax="370" rotMin="-10" rotationAxis="2" />
+                <rotation rotSpeed="30" rotAcceleration="80" rotMax="370" rotMin="-10" rotationAxis="2" />
                 <componentJoint index="6" anchorActor="0"/>
             </movingTool>
 
             <movingTool node="mainArmPhysic" delayedNode="mainArm" playSound="true" isConsumingPower="true">
                 <controls axis="AXIS_CRANE_ARM2" invertAxis="true" mouseSpeedFactor="0.5" iconName="CRANE_ARM1_ROTATE_X" />
-                <rotation rotSpeed="30" rotAcceleration="40" rotMax="24" rotMin="-80" startRot="20" rotationAxis="1" rotSendNumBits="9" />
+                <rotation rotSpeed="30" rotAcceleration="140" rotMax="24" rotMin="-80" startRot="20" rotationAxis="1" rotSendNumBits="9" />
                 <componentJoint index="6" anchorActor="0"/>
             </movingTool>
             <movingTool node="secondArmPhysic" delayedNode="secondArm" playSound="true" isConsumingPower="true">
                 <controls axis="AXIS_CRANE_ARM3" invertAxis="true" mouseSpeedFactor="0.5" iconName="CRANE_ARM2_ROTATE_X" />
-                <rotation rotSpeed="30" rotAcceleration="80" rotMax="179" rotMin="12.290" startRot="175" rotationAxis="1" rotSendNumBits="10"/>
+                <rotation rotSpeed="30" rotAcceleration="120" rotMax="179" rotMin="12.290" startRot="175" rotationAxis="1" rotSendNumBits="10"/>
                 <componentJoint index="6" anchorActor="0"/>
             </movingTool>
 
@@ -504,19 +504,19 @@
             <!-- claw x rotation -->
             <movingTool node="clawRotJoint" playSound="true" isConsumingPower="true">
                 <controls axis="AXIS_CRANE_TOOL2" invertAxis="true" mouseSpeedFactor="1" iconName="GRABBER_ROTATE_Y" />
-                <rotation rotSpeed="-50" rotAcceleration="160" rotationAxis="2" startRot="90"/>
+                <rotation rotSpeed="-80" rotAcceleration="150" rotationAxis="2" startRot="90"/>
                 <componentJoint index="6" anchorActor="1" />
             </movingTool>
 
             <!-- claws rotation -->
             <movingTool node="grabLeftComponentJoint" playSound="true" isConsumingPower="true">
                 <controls axis="AXIS_CRANE_TOOL" invertAxis="true" mouseSpeedFactor="1" iconName="GRABBER_OPEN_CLOSE"/>
-                <rotation rotSpeed="-120" rotAcceleration="300" rotMax="1" rotMin="-115" rotationAxis="3" startRot="-115"/>
+                <rotation rotSpeed="-125" rotAcceleration="300" rotMax="1" rotMin="-115" rotationAxis="3" startRot="-115"/>
                 <componentJoint index="7" anchorActor="0"/>
                 <dependentMovingTool node="grabRightComponentJoint" speedScale="1" />
             </movingTool>
             <movingTool node="grabRightComponentJoint" playSound="true">
-                <rotation rotSpeed="120" rotAcceleration="300" rotMax="120" rotMin="0" rotationAxis="3" startRot="120"/>
+                <rotation rotSpeed="120" rotAcceleration="300" rotMax="125" rotMin="0" rotationAxis="3" startRot="120"/>
                 <componentJoint index="8" anchorActor="0"/>
             </movingTool>
 

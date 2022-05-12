@@ -25,7 +25,7 @@
     <File fileId="59" filename="textures/textures/raude.dds"/>
     <File fileId="60" filename="textures/textures/raudeLoad.dds"/>
     <File fileId="61" filename="textures/textures/raudeUnload.dds"/>
-    <File fileId="5" filename="textures/vehicleShader.xml"/>
+    <File fileId="5" filename="$data/shaders/vehicleShader.xml"/>
     <File fileId="33" filename="$data/shaders/decalShader.xml"/>
     <File fileId="22" filename="$data/shaders/glowShader.xml"/>
     <File fileId="47" filename="$data/shaders/mirrorShader.xml"/>

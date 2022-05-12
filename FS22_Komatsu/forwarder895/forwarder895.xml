@@ -27,7 +27,7 @@
     <base>
         <typeDesc>$l10n_typeDesc_forwarder</typeDesc>
         <filename>forwarder895/Komatsu895Loadflex.i3d</filename>
-        <sounds filename="forwarder895/sounds/forwarder875.xml"/>
+        <sounds filename="forwarder895/sounds/forwarder895.xml"/>
         <size width="3.5" length="10.5" lengthOffset="-0.5" />
         <components>
             <component centerOfMass="0 0.4 3.0"    solverIterationCount="40" mass="10000"/>
@@ -55,12 +55,9 @@
             <joint component1="7" component2="9" node="grabRightComponentJoint" rotLimitForceLimit="-1 -1 60" />
             <collisionPair component1="8" component2="9" enabled="false"/>
         </components>
-        <schemaOverlay attacherJointPosition="0 0">
-            <default name="DEFAULT_VEHICLE"/>
-            <selected name="DEFAULT_VEHICLE_SELECTED"/>
-        </schemaOverlay>
+         <schemaOverlay attacherJointPosition="0 0" name="VEHICLE" />
         <mapHotspot type="TRACTOR" />
-    </base>
+   </base>
 
     <wheels>
         <wheelConfigurations>
@@ -653,7 +650,7 @@
             <!-- claws rotation -->
             <movingTool node="grabLeftComponentJoint" playSound="true" isConsumingPower="true">
                 <controls groupIndex="1" l10nName="label_arm" axis="AXIS_CRANE_TOOL" invertAxis="true" mouseSpeedFactor="1" iconName="GRABBER_OPEN_CLOSE"/>
-                <rotation rotSpeed="-120" rotAcceleration="300" rotMax="1" rotMin="-145" rotationAxis="3" startRot="-135"/>
+                <rotation rotSpeed="-125" rotAcceleration="300" rotMax="1" rotMin="-145" rotationAxis="3" startRot="-135"/>
                 <componentJoint index="7" anchorActor="0"/>
                 <dependentMovingTool node="grabRightComponentJoint" speedScale="1" />
             </movingTool>
@@ -954,8 +951,8 @@
         <i3dMapping id="followCraneCamera" node="0>0|4|9|0" />
         <i3dMapping id="outdoorCameraTarget" node="0>0|4|10" />
         <i3dMapping id="outdoorCamera" node="0>0|4|10|0" />
-        <i3dMapping id="playerRightFootTarget" node="0>0|4|1|3|0" />
-        <i3dMapping id="playerLeftFootTarget" node="0>0|4|1|3|1" />
+        <i3dMapping id="playerRightFootTarget" node="0>0|4|1|2|0" />
+        <i3dMapping id="playerLeftFootTarget" node="0>0|4|1|2|1" />
         <i3dMapping id="wiperFrontArm01" node="0>0|4|2|0|0" />
         <i3dMapping id="wiperFront" node="0>0|4|2|0|0|0|0" />
         <i3dMapping id="wiperFrontArm02Ref" node="0>0|4|2|0|0|0|0|0" />
