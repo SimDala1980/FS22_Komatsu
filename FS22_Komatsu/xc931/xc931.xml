@@ -45,7 +45,7 @@
             <component                             solverIterationCount="20" mass="260"/>
             <component centerOfMass="0 0.4 0.3"    solverIterationCount="20" mass="210"/>
 
-            <joint component1="1" component2="2" node="frontBackJoint" rotLimit="0 0 0" transLimit="0 0 0" rotLimitSpring="0 0 100" rotLimitDamping="0 0 30" />
+            <joint component1="1" component2="2" node="frontBackJoint" rotLimit="0 0 0" transLimit="0 0 0" rotLimitSpring="0 0 1000" rotLimitDamping="0 0 255" />
 
             <joint component1="1" component2="3" node="frontLeftBoggieJoint"  rotLimit="10 0 0" transLimit="0 0 0" />
             <joint component1="1" component2="4" node="frontRightBoggieJoint" rotLimit="10 0 0" transLimit="0 0 0" />
@@ -271,8 +271,9 @@
 
     <drivable>
         <dashboards>
-            <dashboard displayType="ROT"     valueType="accelerationAxis" node="gasPedal"   minRot="0 0 0" maxRot="15 0 0"  doInterpolation="true" groups="MOTOR_ACTIVE"/>
-            <dashboard displayType="ROT"     valueType="decelerationAxis" node="brakePedal" minRot="0 0 0" maxRot="20 0 0"  doInterpolation="true" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ROT" valueType="accelerationAxis" node="gasPedal"   minRot="0 0 0" maxRot="15 0 0"  doInterpolation="true" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="ROT" valueType="decelerationAxis" node="brakePedal" minRot="0 0 0" maxRot="20 0 0"  doInterpolation="true" groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="ROT" valueType="accelerationAxis" jointIndex="1" minRot="0 0 5" maxRot="0 0 0" doInterpolation="true" groups="MOTOR_ACTIVE"/>
         </dashboards>
     </drivable>
 
@@ -388,7 +389,15 @@
         <brakeCompressor capacity="10000" fillSpeed="100" />
         <motorStartDuration>3800</motorStartDuration>
     </motorized>
-
+	<!-- <foldable> -->
+        <!-- <foldingConfigurations> -->
+            <!-- <foldingConfiguration> -->
+                <!-- <foldingParts startMoveDirection="1" foldInputButton="IMPLEMENT_EXTRA3" turnOnFoldMaxLimit="3"> -->
+                    <!-- <foldingPart animationName="midLock" speedScale="1" /> -->
+                <!-- </foldingParts> -->
+            <!-- </foldingConfiguration> -->
+        <!-- </foldingConfigurations> -->
+    <!-- </foldable> -->
     <wipers>
         <wiper animName="wiperFrontAnimation" >
             <state animSpeed="0.75" animPause="2.0" />
@@ -642,7 +651,25 @@
             <part node="leftLowerGrabCol"  startTime="0" duration="1" startRot="0 -60 0" endRot="0 -10 0"/>
             <part node="rightLowerGrabCol" startTime="0" duration="1" startRot="0 60 0" endRot="0 10 0"/>
         </animation>
+		
+		<animation name="frontGrabAnimation">
+            <part node="leftUpperGrab"  startTime="0" duration="1" startRot="0 -75 0" endRot="0 -15 0"/>
+            <part node="rightUpperGrab" startTime="0" duration="1" startRot="0 75 0" endRot="0 15 0"/>
+            <part node="leftUpperGrabCol"  startTime="0" duration="1" startRot="0 -75 0" endRot="0 -15 0"/>
+            <part node="rightUpperGrabCol" startTime="0" duration="1" startRot="0 75 0" endRot="0 15 0"/>
+		</animation>
+		
+		<animation name="backGrabAnimation">
+			<part node="leftLowerGrab"  startTime="0" duration="1" startRot="0 -60 0" endRot="0 -10 0"/>
+            <part node="rightLowerGrab" startTime="0" duration="1" startRot="0 60 0" endRot="0 10 0"/>
+            <part node="leftLowerGrabCol"  startTime="0" duration="1" startRot="0 -60 0" endRot="0 -10 0"/>
+            <part node="rightLowerGrabCol" startTime="0" duration="1" startRot="0 60 0" endRot="0 10 0"/>
+		</animation>
 
+		<!-- <animation name="midLock"> -->
+			<!-- <part componentJointIndex="1" startTime="0" endTime="1" startRotMinLimit="0 0 0" endRotMinLimit="0 0 -90" startRotMaxLimit="0 0 0" endRotMaxLimit="0 0 90"/> -->
+		<!-- </animation> -->
+			
         <animation name="wiperFrontAnimation">
             <part node="wiper" startTime="0.0" endTime="0.4"  startTrans="-0.112 1.475 0.678" endTrans="0.04 1.513 0.661"  startRot="0.0 0.0 0.0"    endRot="-1.177 0.0 0.0" />
             <part node="wiper" startTime="0.4" endTime="0.8"  startTrans="0.04 1.513 0.661"   endTrans="0.31 1.566 0.632"  startRot="-1.177 0.0 0.0" endRot="-2.415 0.0 0.0" />
@@ -654,36 +681,48 @@
         </animation>
     </animations>
 
-    <woodHarvester>
-        <cutNode node="cutNode" attachNode="xc931_cutter_component8" attachReferenceNode="attachReference" sizeY="1.3" sizeZ="1.8" maxRadius="0.4" />
-        <cutLengths min="3.1" max="5.5" step="0.3" />
-        <delimbNode node="sideCutNode" sizeX="0.1" sizeY="1.3" sizeZ="1.8" delimbOnCut="true" />
-        <cutAnimation name="cutAnimation" speedScale="1" cutTime="0.5" />
-        <grabAnimation name="grabberAnimation" speedScale="1" />
-        <treeSizeMeasure node="treeSizeMeasure" rotMaxRadius="0.3" />
+	<woodHarvester>
+	<!-- releasedComponentJointIndex="7" releasedComponentJoint2Index="6" -->
+		<cutNode node="cutNode" attachNode="xc931_cutter_component8" attachReferenceNode="attachReference" sizeY="1.3" sizeZ="1.8" maxRadius="0.4" />
+		<cutLengths min="3.1" max="5.5" step="0.3" />
+		<delimbNode node="sideCutNode" sizeX="0.1" sizeY="1.3" sizeZ="1.8" delimbOnCut="true" />
+		<cutAnimation name="cutAnimation" speedScale="1" cutTime="0.5" />
+		<grabAnimation name="grabberAnimation" speedScale="1" />
+		<treeSizeMeasure node="treeSizeMeasure" rotMaxRadius="0.3" />
 
-        <cutEffects>
-            <effectNode effectClass="ParticleEffect" effectNode="woodChipsEmitter" particleType="CRUSHER_WOOD" emitCountScale="100"/>
-            <effectNode effectClass="ParticleEffect" effectNode="woodDustEmitter" particleType="CRUSHER_DUST" emitCountScale="20"/>
-        </cutEffects>
-        <delimbEffects>
-            <effectNode effectClass="ParticleEffect" effectNode="effectParticleChips" particleType="CRUSHER_WOOD" emitCountScale="15"/>
-            <effectNode effectClass="ParticleEffect" effectNode="effectParticleDust" particleType="CRUSHER_DUST" emitCountScale="4"/>
-        </delimbEffects>
+		<cutEffects>
+			<effectNode effectClass="ParticleEffect" effectNode="woodChipsEmitter" particleType="CRUSHER_WOOD" emitCountScale="100"/>
+			<effectNode effectClass="ParticleEffect" effectNode="woodDustEmitter" particleType="CRUSHER_DUST" emitCountScale="20"/>
+		</cutEffects>
+		<delimbEffects>
+			<effectNode effectClass="ParticleEffect" effectNode="effectParticleChips" particleType="CRUSHER_WOOD" emitCountScale="15"/>
+			<effectNode effectClass="ParticleEffect" effectNode="effectParticleDust" particleType="CRUSHER_DUST" emitCountScale="4"/>
+		</delimbEffects>
 
-        <forwardingNodes>
-            <animationNode node="cutterRotationPart01"   rotAxis="1" rotSpeed="2000" turnOnFadeTime="0" turnOffFadeTime="0" />
-            <animationNode node="cutterRotationPart02"   rotAxis="1" rotSpeed="2000" turnOnFadeTime="0" turnOffFadeTime="0" />
-            <animationNode node="cutterRotationPart03"   rotAxis="1" rotSpeed="2000" turnOnFadeTime="0" turnOffFadeTime="0" />
-            <animationNode node="cutterRotationPart04"   rotAxis="3" rotSpeed="1600"  turnOnFadeTime="0" turnOffFadeTime="0" />
-            <animationNode node="cutterRotationPart05"   rotAxis="3" rotSpeed="-1600" turnOnFadeTime="0" turnOffFadeTime="0" />
-        </forwardingNodes>
+		<forwardingNodes>
+			<animationNode node="cutterRotationPart01"   rotAxis="1" rotSpeed="2000" turnOnFadeTime="0" turnOffFadeTime="0" />
+			<animationNode node="cutterRotationPart02"   rotAxis="1" rotSpeed="2000" turnOnFadeTime="0" turnOffFadeTime="0" />
+			<animationNode node="cutterRotationPart03"   rotAxis="1" rotSpeed="2000" turnOnFadeTime="0" turnOffFadeTime="0" />
+			<animationNode node="cutterRotationPart04"   rotAxis="3" rotSpeed="1600"  turnOnFadeTime="0" turnOffFadeTime="0" />
+			<animationNode node="cutterRotationPart05"   rotAxis="3" rotSpeed="-1600" turnOnFadeTime="0" turnOffFadeTime="0" />
+		</forwardingNodes>
 
-        <dashboards>
-            <dashboard displayType="NUMBER" valueType="curCutLength" numbers="numbersLength" numberColor="0.4678 0.5271 0.1912 0.5" font="GENERIC" precision="0" groups="MOTOR_ACTIVE"/>
-            <dashboard displayType="NUMBER" valueType="diameter" numbers="numbersDiameter" numberColor="0.4678 0.5271 0.1912 0.5" font="GENERIC" precision="0" groups="MOTOR_ACTIVE"/>
-        </dashboards>
-    </woodHarvester>
+		<dashboards>
+			<dashboard displayType="NUMBER" valueType="curCutLength" numbers="numbersLength" numberColor="0.4678 0.5271 0.1912 0.5" font="GENERIC" precision="0" groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="NUMBER" valueType="diameter" numbers="numbersDiameter" numberColor="0.4678 0.5271 0.1912 0.5" font="GENERIC" precision="0" groups="MOTOR_ACTIVE"/>
+		</dashboards>
+	</woodHarvester>
+
+	<woodHarvesterControls>
+        <sawAnimation name="cutAnimation" speedScale="1.2" maxCutDiameter="0.7" />
+        <frontGrabAnimation name="frontGrabAnimation" speedScale="1" />
+        <backGrabAnimation name="backGrabAnimation" speedScale="1" />
+        <rollersGrabAnimation name="rollersGrabAnimation" speedScale="1" />
+        <sounds>
+            <cut file="xc931/sounds/CutterSaw.ogg" linkNode="cuttingBlade" />
+            <cutEnd file="xc931/sounds/CutterSawRaise.ogg" linkNode="cuttingBlade" />
+        </sounds>
+    </woodHarvesterControls>
 
     <ropes>
         <rope baseNode="catmull" targetNode="catmullTarget" baseParameters="0 0 -4 0" targetParameters="0 0 9 0"/>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<crawler xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/crawler.xsd">
+    <file name="forwarder875.i3d" leftNode="0|1|2|5" rightNode="0|1|2|5"/>
+</crawler>

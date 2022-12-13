@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<wheel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../shared/xml/schema/wheel.xsd">
+    <brand>TRELLEBORG</brand>
+    <name>TM2000 Special</name>
+    <default>
+        <physics radius="0.67" width="0.71" mass="0.2" tireType="mud" frictionScale="1.50" maxLongStiffness="11" maxLatStiffness="110" maxLatStiffnessLoad="2" />
+        <tire filename="wheels/TM2000/TM2000Special.i3d" nodeLeft="0|0" nodeRight="0|0" maxDeformation="0.037" sideDeformOffset="0.948" isCareWheel="false" tireTrackAtlasIndex="9" />
+        <outerRim filename="$data/shared/wheels/rims/rim001.i3d" node="0|0" widthAndDiam="24.8 25.9" />
+        <innerRim filename="$data/shared/wheels/rims/rim001.i3d" nodeLeft="2|0" nodeRight="2|1" widthAndDiam="24 26.5" />
+    </default>
+</wheel>
