@@ -6,7 +6,7 @@
         <name>895</name>
         <specs>
             <power>263</power>
-            <maxSpeed>15</maxSpeed>
+            <maxSpeed>21</maxSpeed>
         </specs>
         <functions>
             <function>$l10n_function_forestryTransport</function>
@@ -30,13 +30,13 @@
         <sounds filename="forwarder895/sounds/forwarder895.xml"/>
         <size width="3.5" length="10.5" lengthOffset="-0.5" />
         <components>
-            <component centerOfMass="0 0.4 3.0"    solverIterationCount="40" mass="10000"/>
-            <component centerOfMass="0 0.4 -4"     solverIterationCount="40" mass="10000"/>
+            <component centerOfMass="0 0.4 3.0"    solverIterationCount="40" mass="8000"/>
+            <component centerOfMass="0 0.4 -.5"     solverIterationCount="40" mass="2000"/>
 
-            <component                             solverIterationCount="20" mass="10000"/>
-            <component                             solverIterationCount="20" mass="10000"/>
-            <component                             solverIterationCount="20" mass="5000"/>
-            <component                             solverIterationCount="20" mass="5000"/>
+            <component                             solverIterationCount="20" mass="2000"/>
+            <component                             solverIterationCount="20" mass="2000"/>
+            <component                             solverIterationCount="20" mass="5500"/>
+            <component                             solverIterationCount="20" mass="5500"/>
 
             <component                             solverIterationCount="30" mass="260"/>
             <component                             solverIterationCount="20" mass="210"/>
@@ -359,9 +359,9 @@
                 </crawlers>
             </wheelConfiguration>
 		</wheelConfigurations>
-        <ackermannSteeringConfigurations>
-            <ackermannSteering rotSpeed="25" rotMax="15" rotCenter="0 -0.3" />
-        </ackermannSteeringConfigurations>
+        <!-- <ackermannSteeringConfigurations> -->
+            <!-- <ackermannSteering rotSpeed="25" rotMax="15" rotCenter="0 -0.3" /> -->
+        <!-- </ackermannSteeringConfigurations> -->
 
         <rimColor material="18">SHARED_WHITE1</rimColor>
 
@@ -378,9 +378,9 @@
             <hub linkNode="crawlerLeftBackWheel2"   filename="$data/shared/wheels/hubs/hub_n12_6.xml" isLeft="true"  scale="0.6 0.48 0.48" />
         </hubs>
     </wheels>
-    <articulatedAxis rotNode="frontBackJoint" componentJointIndex="1" anchorActor="0" rotSpeed="-35" rotMax="35" rotMin="-35" />
+    <articulatedAxis rotNode="frontBackJoint" componentJointIndex="1" anchorActor="0" rotSpeed="-35" rotMax="42" rotMin="-42" />
 
-    <powerConsumer ptoRpm="400" neededMinPtoPower="5" neededMaxPtoPower="40"/>
+    <powerConsumer ptoRpm="360" neededMinPtoPower="5" neededMaxPtoPower="40"/>
 
     <speedRotatingParts>
         <speedRotatingPart node="cardanPart01" wheelIndex="1" wheelScale="4"/>
@@ -496,8 +496,8 @@
     <motorized>
         <consumerConfigurations>
             <consumerConfiguration>
-                <consumer fillUnitIndex="1" usage="125" fillType="diesel" /> <!-- usage is per hour at max load and max rpm -->
-                <consumer fillUnitIndex="2" usage="4"  fillType="def" /> <!-- usage is per hour at max load and max rpm -->
+                <consumer fillUnitIndex="1" usage="85" fillType="diesel" /> <!-- usage is per hour at max load and max rpm -->
+                <consumer fillUnitIndex="2" usage="3"  fillType="def" /> <!-- usage is per hour at max load and max rpm -->
             </consumerConfiguration>
         </consumerConfigurations>
 
@@ -531,8 +531,8 @@
         </differentialConfigurations>
 
         <motorConfigurations>
-            <motorConfiguration name="895 Stage 3" hp="286" price="0">
-                <motor torqueScale="3" minRpm="850" maxRpm="2200" maxForwardSpeed="21" maxBackwardSpeed="21" brakeForce="20" lowBrakeForceScale="0.2" rotInertia="0.004">
+            <motorConfiguration name="895 Tier 3" hp="286" price="0">
+                <motor torqueScale="1.2" minRpm="850" maxRpm="2200" maxForwardSpeed="21" maxBackwardSpeed="21" brakeForce="20" lowBrakeForceScale="0.2" rotInertia="0.004">
                     <torque normRpm="0.45" torque="1.6"/>
                     <torque normRpm="0.5" torque="0.97"/>
                     <torque normRpm="0.59" torque="1"/>
@@ -540,10 +540,10 @@
                     <torque normRpm="0.86" torque="0.88"/>
                     <torque normRpm="1" torque="0.72"/>
                 </motor>
-                <transmission minForwardGearRatio="14" maxForwardGearRatio="100" minBackwardGearRatio="14" maxBackwardGearRatio="100" name="$l10n_info_transmission_cvt"/>
+                <transmission minForwardGearRatio="40" maxForwardGearRatio="130" minBackwardGearRatio="40" maxBackwardGearRatio="130" name="$l10n_info_transmission_cvt"/>
             </motorConfiguration>
-            <motorConfiguration name="895 Tier 4 Tune Final" hp="320" price="24000">
-                <motor torqueScale="5.5" minRpm="950" maxRpm="2550" maxForwardSpeed="21" maxBackwardSpeed="21" brakeForce="20" lowBrakeForceScale="0.2" rotInertia="0.004">
+            <motorConfiguration name="895 Tier 4" hp="320" price="24000">
+                <motor torqueScale="1.7" minRpm="950" maxRpm="2550" maxForwardSpeed="21" maxBackwardSpeed="21" brakeForce="20" lowBrakeForceScale="0.2" rotInertia="0.004">
                     <torque normRpm="0.45" torque="1.9"/>
                     <torque normRpm="0.5" torque="1.1"/>
                     <torque normRpm="0.59" torque="1.1"/>
@@ -551,12 +551,12 @@
                     <torque normRpm="0.86" torque="0.88"/>
                     <torque normRpm="1" torque="0.72"/>
                 </motor>
-                <transmission minForwardGearRatio="14" maxForwardGearRatio="100" minBackwardGearRatio="14" maxBackwardGearRatio="100" name="$l10n_info_transmission_cvt"/>
+                <transmission minForwardGearRatio="40" maxForwardGearRatio="130" minBackwardGearRatio="40" maxBackwardGearRatio="130" name="$l10n_info_transmission_cvt"/>
             </motorConfiguration>
         </motorConfigurations>
 
         <exhaustEffects>
-            <exhaustEffect node="exhaustParticle" filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.9 0.9 0.9 1" maxRpmColor="0.01 0.01 0.01 7.5" minRpmScale="0.15" maxRpmScale="0.55"/>
+            <exhaustEffect node="exhaustParticle" filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.9 0.9 0.9 0.1" maxRpmColor="0.9 0.9 0.9 0.4" minRpmScale="0.05" maxRpmScale="0.5"/>
         </exhaustEffects>
 
         <!-- <brakeCompressor capacity="10000" fillSpeed="100" /> -->
@@ -596,7 +596,7 @@
 
             <movingTool node="armXRotPhysic" delayedNode="armXRot" playSound="true" isConsumingPower="true">
                 <controls groupIndex="1" l10nName="label_arm" axis="AXIS_CRANE_ARM" invertAxis="true" mouseSpeedFactor="0.6" iconName="CRANE_ARM1_ROTATE_Y" />
-                <rotation rotSpeed="30" rotAcceleration="140" rotMax="380" rotMin="-20" rotationAxis="2" />
+                <rotation rotSpeed="30" rotAcceleration="140" rotMax="370" rotMin="-10" rotationAxis="2" />
                 <componentJoint index="6" anchorActor="0"/>
             </movingTool>
 

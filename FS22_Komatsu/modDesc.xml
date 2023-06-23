@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="64">
+<modDesc descVersion="67">
     <author>SimDala</author>
-    <version>1.4.0.0</version>
+    <version>1.5.0.0</version>
     <title>
         <en>Komatsu Forestry Machines</en>
 		<de>Komatsu-Forstmaschinen</de>
@@ -21,6 +21,10 @@ Changelog 1.3.0.0
 
 Changelog 1.4.0.0
 - Updated crane functionality, all machines similar to 895
+
+Changelog 1.5.0.0
+- Added new forwarders, 855, 875 flex
+- 931 xc compatible adjustments for Wood Harvester Controls
 ]]></en>
         <de><![CDATA[Komatsu forwarder 875 and harvester XC 931
 ChangeLog 1.1.0.0
@@ -38,8 +42,8 @@ Changelog 1.3.0.0
 - Aktualisierte Kranfunktionalität, alle Maschinen ähnlich wie 895
 ]]></de>
     </description>
-	
-		<l10n>
+
+	<l10n>
 		<text name="BladeGrill">
             <de>Stützfuß, Grill Montiert</de>
             <en>Blade, Guard</en>
@@ -56,15 +60,91 @@ Changelog 1.3.0.0
             <de>Grill, Kein Stützfuß</de>
             <en>Guard, No Blade</en>
         </text> 
+		<text name="Sonnenblenden">
+			<en>Sun Shield</en>
+			<de>Sonnenblende</de>
+		</text>
+		<text name="Bander">
+			<en>Bands and Chain Color</en>
+			<de>Bänder und Kettenfarbe</de>
+		</text>
+		<text name="Band">
+			<en>Bands Color</en>
+			<de>Bänderfarbe</de>
+		</text>
+		<text name="Schutz">
+			<en>Hood Protection</en>
+			<de>Haubenschutz</de>
+		</text>
+		<text name="DoorDecal">
+			<en>Cabin Decal</en>
+			<de>Kabinen Beschriftung</de>
+		</text>
+		<text name="RungenExtra">
+			<en>Rear Warning Marking</en>
+			<de>Heckwarnmarkierung</de>
+		</text>
+		<text name="KOMATSU_RED"  >			<en>KOMATSU RED</en>				<de>Komatsu Rot</de>				</text>
+		<text name="POLISHEDMETAL"  >		<en>POLISHED METAL</en>				<de>Poliertes Metal</de>			</text>
+		<text name="SPECIALBLUE1" >			<en>SPECIAL BLUE 1</en>				<de>Spezial Blau 1</de>				</text>
+		<text name="SPECIALYELLOW" >		<en>SPECIAL YELLOW</en>				<de>Spezial Gelb</de>				</text>
+		<text name="SPECIALBLUE2" >			<en>SPECIAL BLUE 2</en>				<de>Spezial Blau 2</de>				</text>
+		<text name="SPECIALGREEN" >			<en>SPECIAL GREEN</en>				<de>Spezial Grün</de>				</text>
+		<text name="BLACK" >				<en>BLACK</en>						<de>Schwarz</de>					</text>
+		<text name="MANRED" >				<en>MAN RED</en>					<de>MAN Rot</de>					</text>
+		<text name="MANOLDGREEN" >			<en>MAN OLDGREEN</en>				<de>MAN Altgrün</de>				</text>
+		<text name="BROWN" >				<en>BROWN</en>						<de>Braun</de>						</text>
+		<text name="BLUE" >					<en>BLUE</en>						<de>Blau</de>						</text>
+		<text name="BLUE1" >				<en>BLUE 1</en>						<de>Blau 1</de>						</text>
+		<text name="BLUE2" >				<en>BLUE 2</en>						<de>Blau 2</de>						</text>
+		<text name="BLUE3" >				<en>BLUE 3</en>						<de>Blau 3</de>						</text>
+		<text name="GREEN1" >				<en>GREEN 1</en>					<de>Grün 1</de>						</text>
+		<text name="GREEN2" >				<en>GREEN 2</en>					<de>Grün 2</de>						</text>
+		<text name="GREEN3" >				<en>GREEN 3</en>					<de>Grün 3</de>						</text>
+		<text name="GREEN4" >				<en>GREEN 4</en>					<de>Grün 4</de>						</text>
+		<text name="PINK/RED" >				<en>PINK/RED</en>					<de>Pink/Rot</de>					</text>
+		<text name="BERRY" >				<en>BERRY</en>						<de>Beere</de>						</text>
+		<text name="WHITE" >				<en>WHITE</en>						<de>Weiß</de>						</text>
+		<text name="DARKGRAY" >				<en>DARKGRAY</en>					<de>Dunkelgrau</de>					</text>
+		<text name="YELLOW1" >				<en>YELLOW 1</en>					<de>Gelb 1</de>						</text>
+		<text name="YELLOW2" >				<en>YELLOW 2</en>					<de>Gelb 2</de>						</text>
+		<text name="YELLOW3" >				<en>YELLOW 3</en>					<de>Gelb 3</de>						</text>
+		<text name="SPECIALBLUE1METAL" >	<en>SPECIAL BLUE 1 METAL</en>		<de>Spezial Blau 1 Metal</de>		</text>
+		<text name="SPECIALYELLOWMETAL" >	<en>SPECIAL YELLOW METAL</en>		<de>Spezial Gelb Metal</de>			</text>
+		<text name="SPECIALBLUE2METAL" >	<en>SPECIAL BLUE 2 METAL</en>		<de>Spezial Blau 2 Metal</de>		</text>
+		<text name="SPECIALGREENMETAL" >	<en>SPECIAL GREEN METAL</en>		<de>Spezial Grün Metal</de>			</text>
+		<text name="BLACKMETAL" >			<en>BLACK METAL</en>				<de>Schwarz Metal</de>				</text>
+		<text name="MANREDMETAL" >			<en>MAN RED METAL</en>				<de>MAN Rot Metal</de>				</text>
+		<text name="MANOLDGREENMETAL" >		<en>MAN OLDGREEN METAL</en>			<de>MAN Altgrün Metal</de>			</text>
+		<text name="BROWNMETAL" >			<en>BROWN METAL</en>				<de>Braun Metal</de>				</text>
+		<text name="BLUEMETAL" >			<en>BLUE METAL</en>					<de>Blau Metal</de>					</text>
+		<text name="BLUE1METAL" >			<en>BLUE 1 METAL</en>				<de>Blau 1 Metal</de>				</text>
+		<text name="BLUE2METAL" >			<en>BLUE 2 METAL</en>				<de>Blau 2 Metal</de>				</text>
+		<text name="BLUE3METAL" >			<en>BLUE 3 METAL</en>				<de>Blau 3 Metal</de>				</text>
+		<text name="GREEN1METAL" >			<en>GREEN 1 METAL</en>				<de>Grün 1 Metal</de>				</text>
+		<text name="GREEN2METAL" >			<en>GREEN 2 METAL</en>				<de>Grün 2 Metal</de>				</text>
+		<text name="GREEN3METAL" >			<en>GREEN 3 METAL</en>				<de>Grün 3 Metal</de>				</text>
+		<text name="GREEN4METAL" >			<en>GREEN 4 METAL</en>				<de>Grün 4 Metal</de>				</text>
+		<text name="PINK/REDMETAL" >		<en>PINK/RED METAL</en>				<de>Pink/Rot Metal</de>				</text>
+		<text name="BERRYMETAL" >			<en>BERRY METAL</en>				<de>Beere Metal</de>				</text>
+		<text name="WHITEMETAL" >			<en>WHITE METAL</en>				<de>Weiß Metal</de>					</text>
+		<text name="DARKGRAYMETAL" >		<en>DARKGRAY METAL</en>				<de>Dunkelgrau Metal</de>			</text>
+		<text name="YELLOW1METAL" >			<en>YELLOW 1 METAL</en>				<de>Gelb 1 Metal</de>				</text>
+		<text name="YELLOW2METAL" >			<en>YELLOW 2 METAL</en>				<de>Gelb 2 Metal</de>				</text>
+		<text name="YELLOW3METAL" >			<en>YELLOW 3 METAL</en>				<de>Gelb 3 Metal</de>				</text>
 	</l10n>
 	
     <iconFilename>xc931/store_xc931.dds</iconFilename>
     <multiplayer supported="true" />
 
     <storeItems>
+		<storeItem rootNode="vehicle" xmlFilename="forwarder855/forwarder855.xml" />
+		<storeItem rootNode="vehicle" xmlFilename="forwarder875/forwarder875.xml" />
+		<storeItem rootNode="vehicle" xmlFilename="forwarder875LoadFlex/forwarder875FLX.xml" />
+		<storeItem rootNode="vehicle" xmlFilename="forwarder875New/forwarder875.xml" />
 		<storeItem rootNode="vehicle" xmlFilename="forwarder875/forwarder875.xml" />
         <storeItem rootNode="vehicle" xmlFilename="xc931/xc931.xml" />
-		<storeItem rootNode="vehicle" xmlFilename="forwarder895/forwarder895.xml"/>
+		<storeItem rootNode="vehicle" xmlFilename="forwarder895/forwarder895.xml" />
      </storeItems>
 	
 	<vehicleTypes>
@@ -72,6 +152,15 @@ Changelog 1.3.0.0
 			<!-- <specialization name="foldable" /> -->
 			<specialization name="dynamicMountAttacher" />
 			<!-- <specialization name="autoLoadWood2" /> -->
+		</type>
+				<type name="forwarderHRFF" parent="forwarder" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+			<specialization name="cover" />
+		</type>
+		<type name="forwarderHRFFFLX" parent="forwarder" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+			<specialization name="cover" />
+		</type>
+		<type name="forwarderHRFF855" parent="forwarder" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+			<specialization name="cover" />
 		</type>
 	</vehicleTypes>
 </modDesc>
