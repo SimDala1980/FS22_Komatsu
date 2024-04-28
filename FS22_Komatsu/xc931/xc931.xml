@@ -494,7 +494,7 @@
 			
 			<!-- cutter claw rotation -->
 			<movingTool node="leftUpperGrab" playSound="false">
-                <controls  axis="AXIS_CRANE_TOOL" invertAxis="false" mouseSpeedFactor="1" iconName="GRABBER_OPEN_CLOSE" />
+                <!-- <controls  axis="AXIS_CRANE_TOOL" invertAxis="false" mouseSpeedFactor="1" iconName="GRABBER_OPEN_CLOSE" /> -->
                 <componentJoint index="6" anchorActor="0" />
 				<dependentPart node="leftUpperGrabHydraulic" />
 				<animation animName="grabberAnimation" animAcceleration="5" animSpeed="1" />
