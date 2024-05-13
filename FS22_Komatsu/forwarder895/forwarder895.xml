@@ -882,6 +882,14 @@
         <bendingNode minX="-1.5" maxX="1.5" minZ="-4.8" maxZ="0" yOffset="0.5" node="forwarder875_back_component2" />
     </foliageBending>
 
+    <workCameras>
+        <workCamera translation="0 4 2.5" rotation="150 0 180" node="0>" fov="70" />
+        <workCamera node="0>" translation="1.3 2.5 2.3" rotation="-20 180 0" fov="120" />
+        <workCamera node="transArm2" translation="0 -.1 2" rotation="-20 180 0" fov="80" />
+        <workCamera translation="0 3 -1" rotation="-30 0 0" node="1>" fov="80" />
+        <workCamera translation="-0.3 1.06 -5.35" rotation="0 -8 0" node="1>" fov="80" farClip="600"/>
+    </workCameras>
+
     <baseMaterial>
         <material name="forwarder875_mat" baseNode="forwarder875_vis">
             <shaderParameter name="colorMat0" value="KOMATSU_REDMETAL"/>
