@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
-<i3D name="HRFFTM2000" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+<i3D name="TM2000Special.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
   <Asset>
-    <Export program="GIANTS Editor 64bit" version="9.0.2"/>
+    <Export program="GIANTS Editor 64bit" version="9.0.6"/>
   </Asset>
 
   <Files>
@@ -13,21 +13,13 @@
 
 
   <Materials>
-    <Material name="TM2000HRFF" materialId="4" diffuseColor="0.00784314 0.8 0.054902 1" customShaderId="4" customShaderVariation="tirePressureDeformation">
+    <Material name="TM2000HRFF" materialId="5" diffuseColor="0.00784314 0.8 0.054902 1" customShaderId="4" customShaderVariation="tirePressureDeformation">
       <Normalmap fileId="2"/>
       <Glossmap fileId="3"/>
-      <CustomParameter name="RDT" value="0 0 0 0"/>
-      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
       <CustomParameter name="colorMat0" value="1 0.55 0.05 1"/>
-      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
       <CustomParameter name="colorMat2" value="1 1 0.1 1"/>
       <CustomParameter name="colorMat3" value="1 0.1 1 1"/>
-      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
-      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
-      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
-      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
       <CustomParameter name="morphPosition" value="-0.38 -0.676 0.5 0.05"/>
-      <CustomParameter name="prevMorphPosition" value="-0.45 -0.915 0.5 0.1"/>
     </Material>
   </Materials>
 
@@ -40,8 +32,11 @@
   </Dynamics>
 
   <Scene>
-      <TransformGroup name="HRFFTM2000" nodeId="7">
-        <Shape shapeId="1" name="HRFFTM2000" scale="1 0.72 0.72" nodeId="8" materialIds="4" castsShadows="true" receiveShadows="true"/>
+      <TransformGroup name="HRFFTM2000_710" nodeId="8">
+        <Shape shapeId="1" name="HRFFTM2000" nodeId="9" materialIds="5" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <TransformGroup name="HRFFTM2000_600" nodeId="11">
+        <Shape shapeId="2" name="HRFFTM2000" nodeId="12" materialIds="5" castsShadows="true" receiveShadows="true"/>
       </TransformGroup>
   </Scene>
 

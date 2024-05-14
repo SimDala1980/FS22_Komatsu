@@ -12,7 +12,7 @@
         <functions>
             <function>$l10n_function_forestryTransport</function>
         </functions>
-        <image>forwarder875LoadFlex/store_forwarder875FLX.dds</image>
+        <image>store/store_forwarder875FLX.dds</image>
         <price>236000</price>
         <lifetime>600</lifetime>
         <rotation>0</rotation>
@@ -21,9 +21,9 @@
         <shopTranslationOffset>0 0.017 0</shopTranslationOffset>
         <shopRotationOffset>0.008 0 0</shopRotationOffset>
         <shopLoadingDelay initial="0.3"/>
-        <vertexBufferMemoryUsage>8462848</vertexBufferMemoryUsage>
+        <vertexBufferMemoryUsage>8464128</vertexBufferMemoryUsage>
         <indexBufferMemoryUsage>1404928</indexBufferMemoryUsage>
-        <textureMemoryUsage>7143424</textureMemoryUsage>
+        <textureMemoryUsage>6750208</textureMemoryUsage>
         <audioMemoryUsage>382423</audioMemoryUsage>
         <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
         <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
@@ -35,16 +35,16 @@
         <sounds filename="$data/vehicles/komatsu/forwarder875/sounds/forwarder875.xml"/>
         <size width="4" length="10.5" lengthOffset="-0.5"/>
         <components>
-            <component centerOfMass="0 0.4 3" solverIterationCount="40" mass="9000"/>
-            <component centerOfMass="0 0.4 -.5" solverIterationCount="40" mass="1000"/>
-            <component centerOfMass="0.5 0 0"    solverIterationCount="40" mass="2160"/>
-            <component centerOfMass="-0.5 0 0"     solverIterationCount="40" mass="2160"/>
-            <component centerOfMass="0.5 0 0"    solverIterationCount="40" mass="2160"/>
-            <component centerOfMass="-0.5 0 0"     solverIterationCount="40" mass="2160"/>
-            <component centerOfMass="0 -1 0" solverIterationCount="20" mass="260"/>
-            <component solverIterationCount="20" mass="210"/>
-            <component solverIterationCount="20" mass="210"/>
-            <joint component1="1" component2="2" node="frontBackJoint" zRotationNode="frontBackJointZRot" rotLimit="0 0 10" transLimit="0 0 0" rotLimitSpring="0 0 4000" rotLimitDamping="0 0 15"/>
+            <component centerOfMass="0 0.4 2.0" solverIterationCount="40" mass="1000"/>
+            <component centerOfMass="0 0.4 -2.3" solverIterationCount="40" mass="1000"/>
+            <component centerOfMass="0.4 0 0" solverIterationCount="20" mass="4543"/>
+            <component centerOfMass="-0.4 0 0" solverIterationCount="20" mass="4543"/>
+            <component centerOfMass="0.4 0 0" solverIterationCount="20" mass="4543"/>
+            <component centerOfMass="-0.4 0 0" solverIterationCount="20" mass="4543"/>
+            <component centerOfMass="0 -0.8 0"     solverIterationCount="20" mass="260"/>
+            <component                            solverIterationCount="20" mass="150"/>
+            <component                            solverIterationCount="20" mass="150"/>
+            <joint component1="1" component2="2" node="frontBackJoint" zRotationNode="frontBackJointZRot" rotLimit="0 0 22" transLimit="0 0 0" rotLimitSpring="0 0 4000" rotLimitDamping="0 0 15"/>
             <joint component1="1" component2="3" node="frontLeftBoggieJoint" rotLimit="15 0 0" transLimit="0 0 0"/>
             <joint component1="1" component2="4" node="frontRightBoggieJoint" rotLimit="15 0 0" transLimit="0 0 0"/>
             <joint component1="2" component2="5" node="backLeftBoggieJoint" rotLimit="15 0 0" transLimit="0 0 0"/>
@@ -62,63 +62,95 @@
 	
     <wheels>
         <wheelConfigurations>
-            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="NOKIAN" saveId="NOKIAN_DEFAULT">
+            <wheelConfiguration name="%s %s" params="forestKingF2|$l10n_configuration_valueDefault" price="0" brand="NOKIAN" saveId="NOKIAN_DEFAULT">
                 <wheels autoRotateBackSpeed="1.6">
-                    <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/710_45__26_5.xml" isLeft="true">
-                        <physics rotSpeed="1" restLoad="2.6" repr="frontLeftBoggieFrontWheel"  forcePointRatio="0.2" showSteeringAngle="false" initialCompression="35" suspTravel="0.15" spring="50" damper="50" transRatio="1.0" frictionScale="1.8" />
-                    </wheel>
+					<wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/710_45__26_5.xml" isLeft="true">
+                        <physics rotSpeed="1" restLoad="2.3" repr="frontLeftBoggieFrontWheel" forcePointRatio="0.7" showSteeringAngle="false" initialCompression="30" suspTravel="0.15" spring="50" damper="150" transRatio="1.0" frictionScale="2" yOffset="0.035"/>
+					</wheel>
                     <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/710_45__26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="2.6" repr="frontLeftBoggieBackWheel"  forcePointRatio="0.2" showSteeringAngle="false" initialCompression="35" suspTravel="0.15" spring="50" damper="50" transRatio="1.0" frictionScale="1.8" />
-                    </wheel>
+                        <physics rotSpeed="1" restLoad="2.6" repr="frontLeftBoggieBackWheel" forcePointRatio="0.7" showSteeringAngle="false" initialCompression="30" suspTravel="0.15" spring="50" damper="150" transRatio="1.0" frictionScale="2" yOffset="0.035"/>
+					</wheel>
                     <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/710_45__26_5.xml" isLeft="false">
-                        <physics rotSpeed="1" restLoad="2.6" repr="frontRightBoggieFrontWheel"  forcePointRatio="0.2" showSteeringAngle="false" initialCompression="35" suspTravel="0.15" spring="50" damper="50" transRatio="1.0" frictionScale="1.8" />
-                    </wheel>
+                        <physics rotSpeed="1" restLoad="2.6" repr="frontRightBoggieFrontWheel" forcePointRatio="0.7" showSteeringAngle="false" initialCompression="30" suspTravel="0.15" spring="50" damper="150" transRatio="1.0" frictionScale="2" yOffset="0.035"/>
+					</wheel>
                     <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/710_45__26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="2.6" repr="frontRightBoggieBackWheel"  forcePointRatio="0.2" showSteeringAngle="false" initialCompression="35" suspTravel="0.15" spring="50" damper="50" transRatio="1.0" frictionScale="1.8" />
-                    </wheel>
+                        <physics rotSpeed="1" restLoad="2.3" repr="frontRightBoggieBackWheel" forcePointRatio="0.7" showSteeringAngle="false" initialCompression="30" suspTravel="0.15" spring="50" damper="150" transRatio="1.0" frictionScale="2" yOffset="0.035"/>
+					</wheel>
                     <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/710_45__26_5.xml" isLeft="true">
-                        <physics rotSpeed="1" restLoad="2.6" repr="backLeftBoggieFrontWheel"  forcePointRatio="0.2" showSteeringAngle="false" initialCompression="35" suspTravel="0.15" spring="50" damper="50" transRatio="1.0" frictionScale="1.8" />
-                    </wheel>
+                        <physics rotSpeed="1" restLoad="2.8" repr="backLeftBoggieFrontWheel" forcePointRatio="0.7" showSteeringAngle="false" initialCompression="30" suspTravel="0.15" spring="56" damper="150" transRatio="1.0" frictionScale="2" yOffset="0.035"/>
+					</wheel>
                     <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/710_45__26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="2.6" repr="backLeftBoggieBackWheel"  forcePointRatio="0.2" showSteeringAngle="false" initialCompression="35" suspTravel="0.15" spring="50" damper="50" transRatio="1.0" frictionScale="1.8" />
-                    </wheel>
+                        <physics rotSpeed="1" restLoad="2.8" repr="backLeftBoggieBackWheel" forcePointRatio="0.7" showSteeringAngle="false" initialCompression="30" suspTravel="0.15" spring="56" damper="150" transRatio="1.0" frictionScale="2" yOffset="0.035"/>
+					</wheel>
                     <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/710_45__26_5.xml" isLeft="false">
-                        <physics rotSpeed="1" restLoad="2.6" repr="backRightBoggieFrontWheel"  forcePointRatio="0.2" showSteeringAngle="false" initialCompression="35" suspTravel="0.15" spring="50" damper="50" transRatio="1.0" frictionScale="1.8" />
-                    </wheel>
+                        <physics rotSpeed="1" restLoad="2.8" repr="backRightBoggieFrontWheel" forcePointRatio="0.7" showSteeringAngle="false" initialCompression="30" suspTravel="0.15" spring="56" damper="150" transRatio="1.0" frictionScale="2" yOffset="0.035"/>
+					</wheel>
                     <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/710_45__26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="2.6" repr="backRightBoggieBackWheel"  forcePointRatio="0.2" showSteeringAngle="false" initialCompression="35" suspTravel="0.15" spring="50" damper="50" transRatio="1.0" frictionScale="1.8" />
+                        <physics rotSpeed="1" restLoad="2.8" repr="backRightBoggieBackWheel" forcePointRatio="0.7" showSteeringAngle="false" initialCompression="30" suspTravel="0.15" spring="56" damper="150" transRatio="1.0" frictionScale="2" yOffset="0.035"/>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="%s %s" params="forestKingF2|$l10n_configuration_valueWheelBroad" price="4000" brand="NOKIAN" saveId="NOKIAN_BROAD">
+                <wheels baseConfig="NOKIAN_DEFAULT" autoRotateBackSpeed="1.6">
+                    <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/800_40__26_5.xml" isLeft="true">
+                    </wheel>					
+					<wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/800_40__26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                    </wheel>
+ 					<wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/800_40__26_5.xml" isLeft="false">
+                    </wheel>
+					<wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/800_40__26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                    </wheel>
+					<wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/800_40__26_5.xml" isLeft="true">
+                    </wheel>
+					<wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/800_40__26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                    </wheel>
+					<wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/800_40__26_5.xml" isLeft="false">
+                    </wheel>
+					<wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/800_40__26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
                     </wheel>
                 </wheels>
             </wheelConfiguration>
-			<wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="0" brand="NOKIAN" saveId="NOKIAN_WIDE">
-                <wheels autoRotateBackSpeed="1.6">
-                    <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/800_40__26_5.xml" isLeft="true">
-                        <physics rotSpeed="1" restLoad="2.6" repr="frontLeftBoggieFrontWheel"  forcePointRatio="0.2" showSteeringAngle="false" initialCompression="35" suspTravel="0.15" spring="50" damper="50" transRatio="1.0" frictionScale="1.8" />
+			<wheelConfiguration name="Forestech" price="4000" brand="BKT" saveId="BKT_FORESTECH">
+                <wheels baseConfig="NOKIAN_DEFAULT" autoRotateBackSpeed="1.6">
+                    <wheel filename="wheels/bkt/710_45_26_5.xml" isLeft="true">
+                    </wheel>					
+					<wheel filename="wheels/bkt/710_45_26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
                     </wheel>
-                    <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/800_40__26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="2.6" repr="frontLeftBoggieBackWheel"  forcePointRatio="0.2" showSteeringAngle="false" initialCompression="35" suspTravel="0.15" spring="50" damper="50" transRatio="1.0" frictionScale="1.8" />
+ 					<wheel filename="wheels/bkt/710_45_26_5.xml" isLeft="false">
                     </wheel>
-                    <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/800_40__26_5.xml" isLeft="false">
-                        <physics rotSpeed="1" restLoad="2.6" repr="frontRightBoggieFrontWheel"  forcePointRatio="0.2" showSteeringAngle="false" initialCompression="35" suspTravel="0.15" spring="50" damper="50" transRatio="1.0" frictionScale="1.8" />
+					<wheel filename="wheels/bkt/710_45_26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
                     </wheel>
-                    <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/800_40__26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="2.6" repr="frontRightBoggieBackWheel"  forcePointRatio="0.2" showSteeringAngle="false" initialCompression="35" suspTravel="0.15" spring="50" damper="50" transRatio="1.0" frictionScale="1.8" />
+					<wheel filename="wheels/bkt/710_45_26_5.xml" isLeft="true">
                     </wheel>
-                    <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/800_40__26_5.xml" isLeft="true">
-                        <physics rotSpeed="1" restLoad="2.6" repr="backLeftBoggieFrontWheel"  forcePointRatio="0.2" showSteeringAngle="false" initialCompression="35" suspTravel="0.15" spring="50" damper="50" transRatio="1.0" frictionScale="1.8" />
+					<wheel filename="wheels/bkt/710_45_26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
                     </wheel>
-                    <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/800_40__26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="2.6" repr="backLeftBoggieBackWheel"  forcePointRatio="0.2" showSteeringAngle="false" initialCompression="35" suspTravel="0.15" spring="50" damper="50" transRatio="1.0" frictionScale="1.8" />
+					<wheel filename="wheels/bkt/710_45_26_5.xml" isLeft="false">
                     </wheel>
-                    <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/800_40__26_5.xml" isLeft="false">
-                        <physics rotSpeed="1" restLoad="2.6" repr="backRightBoggieFrontWheel"  forcePointRatio="0.2" showSteeringAngle="false" initialCompression="35" suspTravel="0.15" spring="50" damper="50" transRatio="1.0" frictionScale="1.8" />
-                    </wheel>
-                    <wheel filename="$data/shared/wheels/tires/nokian/forestKingF2/800_40__26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="2.6" repr="backRightBoggieBackWheel"  forcePointRatio="0.2" showSteeringAngle="false" initialCompression="35" suspTravel="0.15" spring="50" damper="50" transRatio="1.0" frictionScale="1.8" />
+					<wheel filename="wheels/bkt/710_45_26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
                     </wheel>
                 </wheels>
             </wheelConfiguration>
-			<wheelConfiguration name="428SB" price="0" brand="TRELLEBORG" >
+			<wheelConfiguration name="TR678" price="4000" brand="BKT" saveId="BKT_T678">
+                <wheels baseConfig="NOKIAN_DEFAULT" autoRotateBackSpeed="1.6">
+                    <wheel filename="wheels/bkt/TR678.xml" isLeft="true">
+                    </wheel>					
+					<wheel filename="wheels/bkt/TR678.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                    </wheel>
+ 					<wheel filename="wheels/bkt/TR678.xml" isLeft="false">
+                    </wheel>
+					<wheel filename="wheels/bkt/TR678.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                    </wheel>
+					<wheel filename="wheels/bkt/TR678.xml" isLeft="true">
+                    </wheel>
+					<wheel filename="wheels/bkt/TR678.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                    </wheel>
+					<wheel filename="wheels/bkt/TR678.xml" isLeft="false">
+                    </wheel>
+					<wheel filename="wheels/bkt/TR678.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="428SB" price="4000" brand="TRELLEBORG" saveId="TRELLEBORG_428">
                 <wheels baseConfig="NOKIAN_DEFAULT" autoRotateBackSpeed="1.6">
                     <wheel filename="$data/shared/wheels/tires/trelleborg/TwinForestry428SB/710_45R26_5.xml" isLeft="true">
                     </wheel>					
@@ -138,7 +170,7 @@
                     </wheel>
                 </wheels>
             </wheelConfiguration>
-			<wheelConfiguration name="422SB" price="0" brand="TRELLEBORG" >
+			<wheelConfiguration name="422SB" price="4000" brand="TRELLEBORG" saveId="TRELLEBORG_422">
                 <wheels baseConfig="NOKIAN_DEFAULT" autoRotateBackSpeed="1.6">
                     <wheel filename="$data/shared/wheels/tires/trelleborg/TwinForestry422SB/710_45R26_5.xml" isLeft="true">
                     </wheel>
@@ -158,8 +190,8 @@
                     </wheel>
                 </wheels>
             </wheelConfiguration>
-			<wheelConfiguration name="T2000 Special" price="0" brand="TRELLEBORG" >
-            <wheels baseConfig="NOKIAN_DEFAULT" autoRotateBackSpeed="1.6">
+			<wheelConfiguration name="T2000 Special" price="4000" brand="TRELLEBORG" saveId="TRELLEBORG_T2000">
+				<wheels baseConfig="NOKIAN_DEFAULT" autoRotateBackSpeed="1.6">
                     <wheel filename="wheels/TM2000/710_50R26.xml" isLeft="true">
                     </wheel>
                     <wheel filename="wheels/TM2000/710_50R26.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
@@ -179,84 +211,164 @@
                 </wheels>
             </wheelConfiguration>
 			
-			<wheelConfiguration name="ProGrip F" price="8000" brand="OLOFSFORS" saveId="OLOFSFORS_CHAIN">
-                <wheels baseConfig="NOKIAN_DEFAULT">
+			
+			
+			<!--HintenBänder-->
+			<wheelConfiguration name="ProGripF/H" price="4000" brand="OLOFSFORS" saveId="OLOFSFORS_GripF2">
+                <wheels baseConfig="NOKIAN_DEFAULT" autoRotateBackSpeed="1.6">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
                     <wheel>
-                        <physics radius="0.71" width="0.86" tireType="crawler" />
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                     <wheel>
-                        <physics radius="0.71" width="0.86" tireType="crawler" />
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                     <wheel>
-                        <physics radius="0.71" width="0.86" tireType="crawler" />
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                     <wheel>
-                        <physics radius="0.71" width="0.86" tireType="crawler" />
-                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
-                    </wheel>
-                    <wheel>
-                        <physics radius="0.71" width="0.86" tireType="crawler" />
-                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
-                    </wheel>
-                    <wheel>
-                        <physics radius="0.71" width="0.86" tireType="crawler" />
-                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
-                    </wheel>
-                    <wheel>
-                        <physics radius="0.71" width="0.86" tireType="crawler" />
-                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
-                    </wheel>
-                    <wheel>
-                        <physics radius="0.71" width="0.86" tireType="crawler" />
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                 </wheels>
                 <crawlers>
-                    <crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="frontLeftBoggieFrontWheel" wheelIndices="1" isLeft="true"/>
-					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="frontLeftBoggieBackWheel" wheelIndices="2" isLeft="true"/>
-					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="frontRightBoggieFrontWheel" wheelIndices="3" isLeft="false"/>
-					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="frontRightBoggieBackWheel" wheelIndices="4" isLeft="false"/>
-					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="backLeftBoggieFrontWheel" wheelIndices="5" isLeft="true"/>
+                    <crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="backLeftBoggieFrontWheel" wheelIndices="5" isLeft="true"/>
 					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="backLeftBoggieBackWheel" wheelIndices="6" isLeft="true"/>	
 					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="backRightBoggieFrontWheel" wheelIndices="7" isLeft="false"/>
 					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="backRightBoggieBackWheel" wheelIndices="8" isLeft="false"/>
                 </crawlers>
             </wheelConfiguration>
-			<wheelConfiguration name="ProGripF/ECO-TRACK" price="8000" brand="OLOFSFORS" saveId="CHAIN_TRACK">
+			<wheelConfiguration name="ECO-TRACK/H" price="4000" brand="OLOFSFORS" saveId="OLOFSFORS_ECO-TRACK2">
                 <wheels baseConfig="NOKIAN_DEFAULT" autoRotateBackSpeed="1.6">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
                     <wheel>
-                        <physics radius="0.71" width="0.86" tireType="crawler" />
+                        <physics radius="0.76" width="0.86" tireType="crawler" frictionScale="2.5"/>
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                     <wheel>
-                        <physics radius="0.71" width="0.86" tireType="crawler" />
+                        <physics driveNode="backLeftBoggieBackWheelDriveNode" radius="0.76" width="0.86" tireType="crawler" frictionScale="2.5"/>
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                     <wheel>
-                        <physics radius="0.71" width="0.86" tireType="crawler" />
+                        <physics radius="0.76" width="0.86" tireType="crawler" frictionScale="2.5"/>
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                     <wheel>
-                        <physics radius="0.71" width="0.86" tireType="crawler" />
+                        <physics driveNode="backRightBoggieBackWheelDriveNode" radius="0.76" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                </wheels>
+                <crawlers>
+                    <crawler filename="wheels/olofsfors2/track710_45R26_5_ecoTrack.xml" linkNode="crawlerBackLeft" wheelIndices="5 6" isLeft="true"/>
+                    <crawler filename="wheels/olofsfors2/track710_45R26_5_ecoTrack.xml" linkNode="crawlerBackRight" wheelIndices="7 8" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+            <wheelConfiguration name="EVO-BALTIC/H" price="4000" brand="OLOFSFORS" saveId="OLOFSFORS_EVO-BALTI2">
+                <wheels baseConfig="OLOFSFORS_ECO-TRACK2" autoRotateBackSpeed="1.6">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                </wheels>
+                <crawlers>
+                    <crawler filename="wheels/olofsfors2/track710_45R26_5_evoBaltic.xml" linkNode="crawlerBackLeft" wheelIndices="5 6" isLeft="true"/>
+                    <crawler filename="wheels/olofsfors2/track710_45R26_5_evoBaltic.xml" linkNode="crawlerBackRight" wheelIndices="7 8" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+            <wheelConfiguration name="EX/H" price="4000" brand="OLOFSFORS" saveId="OLOFSFORS_EX2">
+                <wheels baseConfig="OLOFSFORS_ECO-TRACK2" autoRotateBackSpeed="1.6">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                </wheels>
+                <crawlers>
+                    <crawler filename="wheels/olofsfors2/track710_45R26_5_ex.xml" linkNode="crawlerBackLeft" wheelIndices="5 6" isLeft="true"/>
+                    <crawler filename="wheels/olofsfors2/track710_45R26_5_ex.xml" linkNode="crawlerBackRight" wheelIndices="7 8" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+			<wheelConfiguration name="KOVAX/H" price="4000" brand="OLOFSFORS" saveId="OLOFSFORS_KOVAX2">
+                <wheels baseConfig="OLOFSFORS_ECO-TRACK2" autoRotateBackSpeed="1.6">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                </wheels>
+                <crawlers>
+                    <crawler filename="wheels/olofsfors2/track710_45R26_5_kovaX.xml" linkNode="crawlerBackLeft" wheelIndices="5 6" isLeft="true"/>
+                    <crawler filename="wheels/olofsfors2/track710_45R26_5_kovaX.xml" linkNode="crawlerBackRight" wheelIndices="7 8" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+			<wheelConfiguration name="MAGNUM/H" price="4000" brand="OLOFSFORS" saveId="OLOFSFORS_MAGNUM2">
+                <wheels baseConfig="OLOFSFORS_ECO-TRACK2" autoRotateBackSpeed="1.6">
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                    <wheel/>
+                </wheels>
+                <crawlers>
+                    <crawler filename="wheels/olofsfors2/track710_45R26_5_magnum.xml" linkNode="crawlerBackLeft" wheelIndices="5 6" isLeft="true"/>
+                    <crawler filename="wheels/olofsfors2/track710_45R26_5_magnum.xml" linkNode="crawlerBackRight" wheelIndices="7 8" isLeft="false"/>
+                </crawlers>
+            </wheelConfiguration>
+			<!--VorneKette HintenBänder-->
+			<wheelConfiguration name="ProGripF/ECO-TRACK" price="8000" brand="OLOFSFORS" saveId="OLOFSFORS_C1">
+                <wheels baseConfig="NOKIAN_DEFAULT">
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                     <wheel>
-                        <physics radius="0.76" width="0.86" tireType="crawler" />
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                     <wheel>
-                        <physics driveNode="backLeftBoggieBackWheelDriveNode" radius="0.76" width="0.86" tireType="crawler" />
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                     <wheel>
-                        <physics radius="0.76" width="0.86" tireType="crawler" />
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                     <wheel>
+                        <physics radius="0.76" width="0.86" tireType="crawler" frictionScale="2.5"/>
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                     <wheel>
-                        <physics driveNode="backRightBoggieBackWheelDriveNode" radius="0.76" width="0.86" tireType="crawler" />
+                        <physics driveNode="backLeftBoggieBackWheelDriveNode" radius="0.76" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics radius="0.76" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics  driveNode="backRightBoggieBackWheelDriveNode" radius="0.76" width="0.86" tireType="crawler" frictionScale="2.5"/>
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                 </wheels>
@@ -269,13 +381,24 @@
                     <crawler filename="wheels/olofsfors2/track710_45R26_5_ecoTrack.xml" linkNode="crawlerBackRight" wheelIndices="7 8" isLeft="false"/>
                 </crawlers>
             </wheelConfiguration>
-			
-			<wheelConfiguration name="ProGripF/EVO-BALTIC" price="8000" brand="OLOFSFORS" >
-                <wheels baseConfig="CHAIN_TRACK" autoRotateBackSpeed="1.6">
-                    <wheel/>
-                    <wheel/>
-                    <wheel/>
-                    <wheel/>
+			<wheelConfiguration name="ProGripF/EVO-BALTIC" price="8000" brand="OLOFSFORS" saveId="OLOFSFORS_C2">
+                <wheels baseConfig="OLOFSFORS_C1">
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
                     <wheel/>
                     <wheel/>
                     <wheel/>
@@ -290,13 +413,24 @@
                     <crawler filename="wheels/olofsfors2/track710_45R26_5_evoBaltic.xml" linkNode="crawlerBackRight" wheelIndices="7 8" isLeft="false"/>
                 </crawlers>
             </wheelConfiguration>
-			
-			<wheelConfiguration name="ProGripF/EX" price="8000" brand="OLOFSFORS" >
-                <wheels baseConfig="CHAIN_TRACK" autoRotateBackSpeed="1.6">
-                    <wheel/>
-                    <wheel/>
-                    <wheel/>
-                    <wheel/>
+			<wheelConfiguration name="ProGripF/EX" price="8000" brand="OLOFSFORS" saveId="OLOFSFORS_C3">
+                <wheels baseConfig="OLOFSFORS_C1">
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
                     <wheel/>
                     <wheel/>
                     <wheel/>
@@ -307,67 +441,65 @@
 					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="frontLeftBoggieBackWheel" wheelIndices="2" isLeft="true"/>
 					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="frontRightBoggieFrontWheel" wheelIndices="3" isLeft="false"/>
 					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="frontRightBoggieBackWheel" wheelIndices="4" isLeft="false"/>
-                    <crawler filename="wheels/olofsfors2/track710_45R26_5_ex.xml" linkNode="crawlerBackLeft" wheelIndices="5 6" isLeft="true"/>
+					<crawler filename="wheels/olofsfors2/track710_45R26_5_ex.xml" linkNode="crawlerBackLeft" wheelIndices="5 6" isLeft="true"/>
                     <crawler filename="wheels/olofsfors2/track710_45R26_5_ex.xml" linkNode="crawlerBackRight" wheelIndices="7 8" isLeft="false"/>
                 </crawlers>
             </wheelConfiguration>
-			
-			<wheelConfiguration name="ProGripF/KOVAX" price="8000" brand="OLOFSFORS" >
-                <wheels baseConfig="CHAIN_TRACK" autoRotateBackSpeed="1.6">
-                    <wheel/>
-                    <wheel/>
-                    <wheel/>
-                    <wheel/>
-                    <wheel/>
-                    <wheel/>
-                    <wheel/>
-                    <wheel/>
+			<!--VorneHintenGleich-->
+			<wheelConfiguration name="ProGrip F" price="8000" brand="OLOFSFORS" saveId="OLOFSFORS_CHAIN">
+                <wheels baseConfig="NOKIAN_DEFAULT">
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics radius="0.71" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
                 </wheels>
                 <crawlers>
                     <crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="frontLeftBoggieFrontWheel" wheelIndices="1" isLeft="true"/>
 					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="frontLeftBoggieBackWheel" wheelIndices="2" isLeft="true"/>
 					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="frontRightBoggieFrontWheel" wheelIndices="3" isLeft="false"/>
 					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="frontRightBoggieBackWheel" wheelIndices="4" isLeft="false"/>
-                    <crawler filename="wheels/olofsfors2/track710_45R26_5_kovaX.xml" linkNode="crawlerBackLeft" wheelIndices="5 6" isLeft="true"/>
-                    <crawler filename="wheels/olofsfors2/track710_45R26_5_kovaX.xml" linkNode="crawlerBackRight" wheelIndices="7 8" isLeft="false"/>
-                </crawlers>
-            </wheelConfiguration>
-			<wheelConfiguration name="ProGripF/MAGNUM" price="8000" brand="OLOFSFORS" >
-                <wheels baseConfig="CHAIN_TRACK" autoRotateBackSpeed="1.6">
-                    <wheel/>
-                    <wheel/>
-                    <wheel/>
-                    <wheel/>
-                    <wheel/>
-                    <wheel/>
-                    <wheel/>
-                    <wheel/>
-                </wheels>
-                <crawlers>
-                    <crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="frontLeftBoggieFrontWheel" wheelIndices="1" isLeft="true"/>
-					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="frontLeftBoggieBackWheel" wheelIndices="2" isLeft="true"/>
-					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="frontRightBoggieFrontWheel" wheelIndices="3" isLeft="false"/>
-					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="frontRightBoggieBackWheel" wheelIndices="4" isLeft="false"/>
-                    <crawler filename="wheels/olofsfors2/track710_45R26_5_magnum.xml" linkNode="crawlerBackLeft" wheelIndices="5 6" isLeft="true"/>
-                    <crawler filename="wheels/olofsfors2/track710_45R26_5_magnum.xml" linkNode="crawlerBackRight" wheelIndices="7 8" isLeft="false"/>
+					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="backLeftBoggieFrontWheel" wheelIndices="5" isLeft="true"/>
+					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="backLeftBoggieBackWheel" wheelIndices="6" isLeft="true"/>	
+					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="backRightBoggieFrontWheel" wheelIndices="7" isLeft="false"/>
+					<crawler filename="wheels/olofsfors2/wheel710_45R26_5_proGripF.xml" linkNode="backRightBoggieBackWheel" wheelIndices="8" isLeft="false"/>
                 </crawlers>
             </wheelConfiguration>
             <wheelConfiguration name="ECO-TRACK" price="8000" brand="OLOFSFORS" saveId="OLOFSFORS_ECO-TRACK">
-                <wheels baseConfig="NOKIAN_DEFAULT" autoRotateBackSpeed="1.6">
+                <wheels baseConfig="NOKIAN_DEFAULT">
                     <wheel>
                         <physics radius="0.76" width="0.86" tireType="crawler" frictionScale="2.5"/>
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                     <wheel>
-                        <physics driveNode="frontLeftBoggieBackWheelDriveNode" radius="0.76" width="0.86" tireType="crawler" />
-                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
-                    </wheel>
-                    <wheel>
-                        <physics radius="0.76" width="0.86" tireType="crawler" frictionScale="2.5"/>
-                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
-                    </wheel>
-                    <wheel>
-                        <physics driveNode="frontRightBoggieBackWheelDriveNode" radius="0.76" width="0.86" tireType="crawler" />
+                        <physics driveNode="frontLeftBoggieBackWheelDriveNode"  radius="0.76" width="0.86" tireType="crawler" frictionScale="2.5"/>
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                     <wheel>
@@ -375,7 +507,7 @@
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                     <wheel>
-                        <physics driveNode="backLeftBoggieBackWheelDriveNode" radius="0.76" width="0.86" tireType="crawler" />
+                        <physics driveNode="frontRightBoggieBackWheelDriveNode" radius="0.76" width="0.86" tireType="crawler" frictionScale="2.5"/>
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                     <wheel>
@@ -383,7 +515,15 @@
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                     <wheel>
-                        <physics driveNode="backRightBoggieBackWheelDriveNode" radius="0.76" width="0.86" tireType="crawler" />
+                        <physics driveNode="backLeftBoggieBackWheelDriveNode" radius="0.76" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics radius="0.76" width="0.86" tireType="crawler" frictionScale="2.5"/>
+                        <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
+                    </wheel>
+                    <wheel>
+                        <physics  driveNode="backRightBoggieBackWheelDriveNode" radius="0.76" width="0.86" tireType="crawler" frictionScale="2.5"/>
                         <tire tireTrackAtlasIndex="5" maxDeformation="0" sideDeformOffset="1"/>
                     </wheel>
                 </wheels>
@@ -395,7 +535,7 @@
                 </crawlers>
             </wheelConfiguration>
             <wheelConfiguration name="EVO-BALTIC" price="8000" brand="OLOFSFORS" saveId="OLOFSFORS_EVO-BALTIC">
-                <wheels baseConfig="OLOFSFORS_ECO-TRACK" autoRotateBackSpeed="1.6">
+                <wheels baseConfig="OLOFSFORS_ECO-TRACK">
                     <wheel/>
                     <wheel/>
                     <wheel/>
@@ -413,7 +553,7 @@
                 </crawlers>
             </wheelConfiguration>
             <wheelConfiguration name="EX" price="8000" brand="OLOFSFORS" saveId="OLOFSFORS_EX">
-                <wheels baseConfig="OLOFSFORS_ECO-TRACK" autoRotateBackSpeed="1.6">
+                <wheels baseConfig="OLOFSFORS_ECO-TRACK">
                     <wheel/>
                     <wheel/>
                     <wheel/>
@@ -430,8 +570,8 @@
                     <crawler filename="wheels/olofsfors2/track710_45R26_5_ex.xml" linkNode="crawlerBackRight" wheelIndices="7 8" isLeft="false"/>
                 </crawlers>
             </wheelConfiguration>
-            <wheelConfiguration name="KOVAX" price="8000" brand="OLOFSFORS" saveId="OLOFSFORS_KOVAX">
-                <wheels baseConfig="OLOFSFORS_ECO-TRACK" autoRotateBackSpeed="1.6">
+			<wheelConfiguration name="KOVAX" price="8000" brand="OLOFSFORS" saveId="OLOFSFORS_KOVAX">
+                <wheels baseConfig="OLOFSFORS_ECO-TRACK">
                     <wheel/>
                     <wheel/>
                     <wheel/>
@@ -448,8 +588,8 @@
                     <crawler filename="wheels/olofsfors2/track710_45R26_5_kovaX.xml" linkNode="crawlerBackRight" wheelIndices="7 8" isLeft="false"/>
                 </crawlers>
             </wheelConfiguration>
-            <wheelConfiguration name="MAGNUM" price="8000" brand="OLOFSFORS" saveId="OLOFSFORS_MAGNUM">
-                <wheels baseConfig="OLOFSFORS_ECO-TRACK" autoRotateBackSpeed="1.6">
+			<wheelConfiguration name="MAGNUM" price="8000" brand="OLOFSFORS" saveId="OLOFSFORS_MAGNUM">
+                <wheels baseConfig="OLOFSFORS_ECO-TRACK">
                     <wheel/>
                     <wheel/>
                     <wheel/>
@@ -471,16 +611,15 @@
             <ackermannSteering rotSpeed="25" rotMax="15" rotCenter="0 -0.3"/>
         </ackermannSteeringConfigurations>
         <hubs>
-            <color0>SHARED_BLACK1</color0>
-            <color1 material="0">SHARED_BLACK1</color1>
-            <hub linkNode="frontLeftBoggieFrontWheel" filename="$data/shared/wheels/hubs/hub_n12_6.xml" isLeft="true" scale="0.3 0.4 0.4"/>
-            <hub linkNode="frontLeftBoggieBackWheelDriveNode" filename="$data/shared/wheels/hubs/hub_n12_6.xml" isLeft="true" scale="0.3 0.4 0.4"/>
-            <hub linkNode="frontRightBoggieFrontWheel" filename="$data/shared/wheels/hubs/hub_n12_6.xml" isLeft="false" scale="0.3 0.4 0.4"/>
-            <hub linkNode="frontRightBoggieBackWheelDriveNode" filename="$data/shared/wheels/hubs/hub_n12_6.xml" isLeft="false" scale="0.3 0.4 0.4"/>
-            <hub linkNode="backLeftBoggieFrontWheel" filename="$data/shared/wheels/hubs/hub_n12_6.xml" isLeft="true" scale="0.3 0.4 0.4"/>
-            <hub linkNode="backLeftBoggieBackWheelDriveNode" filename="$data/shared/wheels/hubs/hub_n12_6.xml" isLeft="true" scale="0.3 0.4 0.4"/>
-            <hub linkNode="backRightBoggieBackWheelDriveNode" filename="$data/shared/wheels/hubs/hub_n12_6.xml" isLeft="false" scale="0.3 0.4 0.4"/>
-            <hub linkNode="backRightBoggieFrontWheel" filename="$data/shared/wheels/hubs/hub_n12_6.xml" isLeft="false" scale="0.3 0.4 0.4"/>
+            <color0>SHARED_DA_METAL_BLACK</color0>
+            <hub linkNode="frontLeftBoggieFrontWheel" 			filename="wheels/hub/hub.xml" isLeft="true" scale="0.4 0.5 0.5" offset="0.02"/>
+            <hub linkNode="frontLeftBoggieBackWheelDriveNode" 	filename="wheels/hub/hub.xml" isLeft="true" scale="0.4 0.5 0.5" offset="0.02"/>
+            <hub linkNode="frontRightBoggieFrontWheel" 			filename="wheels/hub/hub.xml" isLeft="false" scale="0.4 0.5 0.5" offset="0.02"/>
+            <hub linkNode="frontRightBoggieBackWheelDriveNode" 	filename="wheels/hub/hub.xml" isLeft="false" scale="0.4 0.5 0.5" offset="0.02"/>
+            <hub linkNode="backLeftBoggieFrontWheel" 			filename="wheels/hub/hub.xml" isLeft="true" scale="0.4 0.5 0.5" offset="0.02"/>
+            <hub linkNode="backLeftBoggieBackWheelDriveNode" 	filename="wheels/hub/hub.xml" isLeft="true" scale="0.4 0.5 0.5" offset="0.02"/>
+            <hub linkNode="backRightBoggieBackWheelDriveNode" 	filename="wheels/hub/hub.xml" isLeft="false" scale="0.4 0.5 0.5" offset="0.02"/>
+            <hub linkNode="backRightBoggieFrontWheel" 			filename="wheels/hub/hub.xml" isLeft="false" scale="0.4 0.5 0.5" offset="0.02"/>
         </hubs>
     </wheels>
 	
@@ -495,7 +634,7 @@
 		<rimColorConfiguration name="$l10n_MANOLDGREEN" color="0.1878 0.3006 0.2159 0" price="300" />
 		<rimColorConfiguration name="MAN Beige" color="0.3021 0.2549 0.1734 0" price="300" />
 		<rimColorConfiguration name="TATRA" color="0.0200 0.2800 0.1900 0" price="300" />
-		<rimColorConfiguration name="$l10n_BROWN" color="0.0886 0.0203 0.0012 0" price="300" />
+		<rimColorConfiguration name="$l10n_BROWN2" color="0.0886 0.0203 0.0012 0" price="300" />
 		<rimColorConfiguration name="$l10n_BLUE" material="0" color="0 0 1 0" price="300"/>
 		<rimColorConfiguration name="$l10n_BLUE1" color="0.0000 0.4047 0.7519 0" price="300" />
 		<rimColorConfiguration name="$l10n_BLUE2" color="0.0055 0.0170 0.0265 0" price="300" />
@@ -504,7 +643,7 @@
 		<rimColorConfiguration name="$l10n_GREEN2" color="0.0265 0.6592 0.3204 0" price="300" />
 		<rimColorConfiguration name="$l10n_GREEN3" color="0.0072 0.2758 0.0528 0" price="300" />
 		<rimColorConfiguration name="$l10n_GREEN4" color="0.0000 1.0000 0.0415 0" price="300" />
-		<rimColorConfiguration name="Pink" color="0.5924 0.1871 0.3723 0" price="300" />
+		<rimColorConfiguration name="$l10n_Pink" color="0.5924 0.1871 0.3723 0" price="300" />
 		<rimColorConfiguration name="$l10n_PINK/RED" color="0.8751 0.0017 0.0303 0" price="300" />
 		<rimColorConfiguration name="$l10n_BERRY" color="0.1087 0.0210 0.0370 0" price="300" />
 		<rimColorConfiguration name="$l10n_WHITE" color="1.0000 1.0000 1.0000 0" price="300" />
@@ -548,12 +687,19 @@
 		<rimColorConfiguration name="NAVY METAL" material="27" color="0.0529 0.0865 0.0242 1" price="600" />
     </rimColorConfigurations>
 	
-    <articulatedAxis rotNode="frontBackJoint" componentJointIndex="1" anchorActor="0" rotSpeed="-35" rotMax="42" rotMin="-42" customWheelIndices1="1 2 3 4" customWheelIndices2="5 6 7 8"/>
-    
-	<powerConsumer ptoRpm="310" neededMinPtoPower="5" neededMaxPtoPower="40"/>
+    <articulatedAxis rotNode="frontBackJoint" componentJointIndex="1" anchorActor="0" rotSpeed="-35" rotMax="35" rotMin="-35" customWheelIndices1="1 2 3 4" customWheelIndices2="5 6 7 8">
+        <sounds>
+            <steering template="defaultHydraulicSound" pitchScale="0.3" linkNodeOffset="0 0.7 1" innerRadius="15" outerRadius="25" fadeIn="0.1" fadeOut="0.1">
+                <volume indoor="0.9" outdoor="1.0"/>
+                <lowpassGain indoor="0.6" outdoor="1"/>
+            </steering>
+        </sounds>
+    </articulatedAxis>
+	
+	<powerConsumer ptoRpm="350" neededMinPtoPower="5" neededMaxPtoPower="40"/>
 	
 	<licensePlates defaultPlacement="FRONT">
-        <licensePlate frame="false" node="0>0|3|13" position="ANY" preferedType="ELONGATED" placementArea="0.06 0.26 0.07 0.26"/>
+        <licensePlate frame="false" node="0>0|3|0|0|13" position="ANY" preferedType="ELONGATED" placementArea="0.06 0.26 0.07 0.26"/>
     </licensePlates>
 	
     <speedRotatingParts>
@@ -563,6 +709,8 @@
 	
     <dynamicallyLoadedParts>
         <dynamicallyLoadedPart node="0" linkNode="extinguisher" filename="$data/shared/assets/extinguisher.i3d"/>
+		<dynamicallyLoadedPart node="0" linkNode="0>0|12|4|0" filename="$data/shared/assets/extinguisher.i3d"/>
+		<dynamicallyLoadedPart node="0" linkNode="0>0|12|4|1" filename="$data/shared/assets/extinguisher.i3d"/>
     </dynamicallyLoadedParts>
 	
     <enterable isTabbable="true">
@@ -574,10 +722,9 @@
                 <raycastNode node="cameraRaycastNode2"/>
                 <raycastNode node="cameraRaycastNode3"/>
             </camera>
-            <camera node="indoorCamera" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" shadowFocusBox="shadowFocusBox" suspensionNodeIndex="1"/>
-			<camera node="indoorCamera2" rotatable="true" useWorldXZRotation="false" allowHeadTracking="true"  useMirror="true" isInside="true" shadowFocusBox="shadowFocusBox" positionSmoothingParameter="0.256"/>
-            <camera node="1>0|3|4|3|0|0" rotatable="false" useWorldXZRotation="false" allowHeadTracking="true"/>
-			<camera node="craneCamera" rotatable="false" useWorldXZRotation="false" allowHeadTracking="true"/>
+            <camera node="indoorCamera" rotatable="true" useWorldXZRotation="false" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" shadowFocusBox="shadowFocusBox" suspensionNodeIndex="1"/>
+			<camera node="1>0|3|4|8|0|0" rotatable="false" useWorldXZRotation="false" useMirror="false" isInside="false" allowHeadTracking="false"  />
+			<camera node="1>0|3|4|9|0|0" rotatable="false" useWorldXZRotation="false" useMirror="false" isInside="false" allowHeadTracking="false"  />
         </cameras>
         <characterNode node="playerSkin" cameraMinDistance="0.5" spineRotation="-90 0 90">
             <target ikChain="rightFoot" targetNode="playerRightFootTarget"/>
@@ -600,13 +747,13 @@
         <dashboards>
             <dashboard displayType="NUMBER" valueType="time" numbers="numbersTime" numberColor="0.5210 0.5776 0.2664 1" font="GENERIC" precision="2" groups="MOTOR_ACTIVE"/>
             <dashboard displayType="NUMBER" valueType="operatingTime" numbers="numbersOperatingTime" numberColor="0.5210 0.5776 0.2664 1" font="GENERIC" precision="1" groups="MOTOR_ACTIVE"/>
-			<dashboard displayType="NUMBER" valueType="time" numbers="0>0|3|2|2|0|1|3" numberColor="0.5210 0.5776 0.2664 1" font="GENERIC" precision="2" groups="MOTOR_ACTIVE"/>
-            <dashboard displayType="NUMBER" valueType="operatingTime" numbers="0>0|3|2|2|0|1|2" numberColor="0.5210 0.5776 0.2664 1" font="GENERIC" precision="1" groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="NUMBER" valueType="time" numbers="0>0|3|0|0|2|2|0|1|3" numberColor="0.5210 0.5776 0.2664 1" font="GENERIC" precision="2" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="NUMBER" valueType="operatingTime" numbers="0>0|3|0|0|2|2|0|1|2" numberColor="0.5210 0.5776 0.2664 1" font="GENERIC" precision="1" groups="MOTOR_ACTIVE"/>
         </dashboards>
     </enterable>
 	
     <drivable>
-		<steeringWheel node="0>0|3|0|0|7|2|0" indoorRotation="280" outdoorRotation="280" />
+		<steeringWheel node="0>0|3|0|0|0|0|7|2|0" indoorRotation="280" outdoorRotation="280" />
         <dashboards>
             <dashboard displayType="ROT" valueType="accelerationAxis" node="gasPedal" minRot="0 0 0" maxRot="20 0 0" doInterpolation="true" groups="MOTOR_ACTIVE NOT_REVERSE_DRIVING"/>
             <dashboard displayType="ROT" valueType="decelerationAxis" node="brakePedal" minRot="0 0 0" maxRot="20 0 0" doInterpolation="true" groups="MOTOR_ACTIVE NOT_REVERSE_DRIVING"/>
@@ -650,6 +797,7 @@
             <state lightTypes="0"/>
             <state lightTypes="0 1"/>
             <state lightTypes="0 1 2"/>
+			<state lightTypes="0 1 2 3"/>
         </states>
         <realLights>
             <low>
@@ -657,7 +805,8 @@
                 <light node="workLightFrontLow" lightTypes="1"/>
                 <light node="workLightBackLow01" lightTypes="2"/>
                 <light node="workLightBackLow02" lightTypes="2"/>
-                <light node="highBeamLow" lightTypes="3"/>
+                <!-- <light node="highBeamLow" lightTypes="3"/> -->
+				<light node="1>0|3|4|0|0|0|0|0|0|0|0|13" lightTypes="3"/>
             </low>
             <high>
                 <light node="frontLightHigh" lightTypes="0" />
@@ -666,7 +815,8 @@
                 <light node="workLightBackHigh01" lightTypes="1"/>
                 <light node="workLightBackHigh02" lightTypes="1"/>
                 <light node="workLightBackHigh03" lightTypes="1"/>
-                <light node="highBeamHigh" lightTypes="3"/>
+				<!-- <light node="highBeamHigh" lightTypes="3"/> -->
+                <light node="1>0|3|4|0|0|0|0|0|0|0|0|13" lightTypes="3"/>
                 <brakeLight node="backLightsHigh"/>
                 <turnLightLeft node="turnLightLeftBack"/>
                 <turnLightRight node="turnLightRightBack"/>
@@ -675,7 +825,7 @@
         <defaultLights>
             <defaultLight shaderNode="frontLightsSelfIllumStatic" lightTypes="0" intensity="45"/>
             <defaultLight shaderNode="backLightsSelfIllumStatic" lightTypes="0" intensity="45"/>
-			<defaultLight shaderNode="0>0|3|0|0|7|3"  lightTypes="0" intensity="50" />
+			<defaultLight shaderNode="0>0|3|0|0|0|0|7|3"  lightTypes="0" intensity="50" />
         </defaultLights>
         <turnLights>
             <turnLightLeft shaderNode="turnLightLeftSelfIllumStatic"/>
@@ -709,9 +859,9 @@
     <motorized>
         <consumerConfigurations>
             <consumerConfiguration>
-                <consumer fillUnitIndex="1" usage="70" fillType="diesel"/>
+                <consumer fillUnitIndex="1" usage="75" fillType="diesel"/>
                 <!-- usage is per hour at max load and max rpm -->
-                <consumer fillUnitIndex="2" usage="3" fillType="def"/>
+                <consumer fillUnitIndex="2" usage="4" fillType="def"/>
                 <!-- usage is per hour at max load and max rpm -->
             </consumerConfiguration>
         </consumerConfigurations>
@@ -737,7 +887,7 @@
         </differentialConfigurations>
         <motorConfigurations>
             <motorConfiguration name="875 FLX" hp="251" price="0">
-                <motor torqueScale="1.06" minRpm="850" maxRpm="2200" maxForwardSpeed="21" maxBackwardSpeed="21" brakeForce="17" lowBrakeForceScale="0.12" lowBrakeForceSpeedLimit="1">
+                <motor torqueScale="1.06" minRpm="850" maxRpm="2200" maxForwardSpeed="21" maxBackwardSpeed="10" brakeForce="17" lowBrakeForceScale="0.12" lowBrakeForceSpeedLimit="1">
                     <torque normRpm="0.45" torque="0.9"/>
                     <torque normRpm="0.5" torque="0.97"/>
                     <torque normRpm="0.59" torque="1"/>
@@ -745,10 +895,10 @@
                     <torque normRpm="0.86" torque="0.88"/>
                     <torque normRpm="1" torque="0.72"/>
                 </motor>
-                <transmission minForwardGearRatio="45" maxForwardGearRatio="200" minBackwardGearRatio="45" maxBackwardGearRatio="200" name="$l10n_info_transmission_cvt"/>
+                <transmission minForwardGearRatio="34" maxForwardGearRatio="290" minBackwardGearRatio="34" maxBackwardGearRatio="290" name="$l10n_info_transmission_cvt"/>
             </motorConfiguration>
 			<motorConfiguration name="875 FLX Stage 1" hp="360" price="8000">
-                <motor torqueScale="1.52" minRpm="850" maxRpm="2200" maxForwardSpeed="21" maxBackwardSpeed="21" brakeForce="17" lowBrakeForceScale="0.12" lowBrakeForceSpeedLimit="1">
+                <motor torqueScale="1.52" minRpm="850" maxRpm="2200" maxForwardSpeed="21" maxBackwardSpeed="10" brakeForce="17" lowBrakeForceScale="0.12" lowBrakeForceSpeedLimit="1">
                     <torque normRpm="0.45" torque="0.9"/>
                     <torque normRpm="0.5" torque="0.97"/>
                     <torque normRpm="0.59" torque="1"/>
@@ -756,7 +906,7 @@
                     <torque normRpm="0.86" torque="0.88"/>
                     <torque normRpm="1" torque="0.72"/>
                 </motor>
-                <transmission minForwardGearRatio="45" maxForwardGearRatio="200" minBackwardGearRatio="45" maxBackwardGearRatio="200" name="$l10n_info_transmission_cvt"/>
+                <transmission minForwardGearRatio="34" maxForwardGearRatio="290" minBackwardGearRatio="34" maxBackwardGearRatio="290" name="$l10n_info_transmission_cvt"/>
             </motorConfiguration>
         </motorConfigurations>
         <exhaustEffects>
@@ -767,8 +917,8 @@
         <dashboards>
             <dashboard displayType="NUMBER" valueType="rpm" numbers="numbersRpm" numberColor="0.5210 0.5776 0.2664 1" font="GENERIC" precision="0" groups="MOTOR_ACTIVE"/>
             <dashboard displayType="NUMBER" valueType="speed" numbers="numbersSpeed" numberColor="0.5210 0.5776 0.2664 1" font="GENERIC" precision="1" groups="MOTOR_ACTIVE"/>
-			<dashboard displayType="NUMBER" valueType="rpm" numbers="0>0|3|2|2|0|1|0" numberColor="0.5210 0.5776 0.2664 1" font="GENERIC" precision="0" groups="MOTOR_ACTIVE"/>
-            <dashboard displayType="NUMBER" valueType="speed" numbers="0>0|3|2|2|0|1|1" numberColor="0.5210 0.5776 0.2664 1" font="GENERIC" precision="1" groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="NUMBER" valueType="rpm" numbers="0>0|3|0|0|2|2|0|1|0" numberColor="0.5210 0.5776 0.2664 1" font="GENERIC" precision="0" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="NUMBER" valueType="speed" numbers="0>0|3|0|0|2|2|0|1|1" numberColor="0.5210 0.5776 0.2664 1" font="GENERIC" precision="1" groups="MOTOR_ACTIVE"/>
         </dashboards>
     </motorized>
 	
@@ -787,12 +937,6 @@
         </wiper>
     </wipers>
 	
-    <logGrab jointNode="f20D_grab_component7" jointRoot="f20D_grab_component7" lockAllAxis="true">
-        <trigger node="logGrabTrigger"/>
-        <grab componentJoint="7" axis="1" rotationOffsetThreshold="10" rotationOffsetTime="1000"/>
-        <grab componentJoint="8" axis="1" rotationOffsetThreshold="10" rotationOffsetTime="1000"/>
-    </logGrab>
-	
 	<cover>
         <coverConfigurations >
 			<coverConfiguration price="0">
@@ -800,6 +944,12 @@
 			</coverConfiguration>
         </coverConfigurations>
     </cover>
+	
+	<logGrab jointNode="f20D_grab_component7" jointRoot="f20D_grab_component7" lockAllAxis="true">
+        <trigger node="logGrabTrigger" />
+        <grab componentJoint="7" axis="1" rotationOffsetThreshold="10" rotationOffsetTime="1000"/>
+        <grab componentJoint="8" axis="1" rotationOffsetThreshold="10" rotationOffsetTime="1000"/>
+    </logGrab>
 	
     <cylindered>
         <movingTools>
@@ -817,13 +967,13 @@
                     <zTranslationNode node="transArm2Physic"/>
                 </zTranslationNodes>
             </easyArmControl>
-            
-            <movingTool node="scTargetNodeY" isEasyControlTarget="true" isConsumingPower="true">
-                <controls groupIndex="1" axis="AXIS_CRANE_ARM2" invertAxis="false" mouseSpeedFactor="0.5" iconName="CRANE_EC_TRANSLATE_Y"/>
-            </movingTool>
             <movingTool node="scTargetNodeZ" isEasyControlTarget="true" isConsumingPower="true">
-                <controls groupIndex="1" axis="AXIS_CRANE_ARM3" invertAxis="false" mouseSpeedFactor="0.5" iconName="CRANE_EC_TRANSLATE_Z"/>
-            </movingTool><movingTool node="armXRotPhysic" delayedNode="armXRot" playSound="true" isConsumingPower="true">
+                <controls groupIndex="1" axis="AXIS_CRANE_ARM2" invertAxis="true" mouseSpeedFactor="0.5" iconName="CRANE_EC_TRANSLATE_Z"/>
+            </movingTool>
+            <movingTool node="scTargetNodeY" isEasyControlTarget="true" isConsumingPower="true">
+                <controls groupIndex="1" axis="AXIS_CRANE_ARM3" invertAxis="false" mouseSpeedFactor="0.5" iconName="CRANE_EC_TRANSLATE_Y"/>
+            </movingTool>
+            <movingTool node="armXRotPhysic" delayedNode="armXRot" playSound="true" isConsumingPower="true">
                 <controls groupIndex="1" axis="AXIS_CRANE_ARM" invertAxis="true" mouseSpeedFactor="0.6" iconName="CRANE_ARM1_ROTATE_Y"/>
                 <rotation rotSpeed="30" rotAcceleration="140" rotMax="370" rotMin="-10" rotationAxis="2"/>
                 <componentJoint index="6" anchorActor="0"/>
@@ -890,13 +1040,13 @@
                 <dependentPart node="wiperBackArm02"/>
             </movingTool>
 			<!--SonnenSchutz Front-->
-			<movingTool node="0>0|3|7|0|0" >
-				<controls groupIndex="2" axis="AXIS_CRANE_ARM2" invertAxis="true" mouseSpeedFactor="1" iconName="CRANE_ARM2_TRANSLATE"/>
-				<animation animName="SBFront" animAcceleration="1" animSpeed="0.5" />
+			<movingTool node="0>0|3|0|0|7|0|0" >
+				<controls groupIndex="2" axis="AXIS_CRANE_ARM3" invertAxis="true" mouseSpeedFactor="1" iconName="IMPLEMENT_TRANS_Y"/>
+				<animation animName="SBFront" animAcceleration="1" animSpeed="-0.5" />
 			</movingTool>
 			<!--FlexStemopel-->
 			<movingTool node="1>0|8|1|0|0" >
-				<controls groupIndex="1" axis="AXIS_CRANE_TOOL3" invertAxis="true" mouseSpeedFactor="1" iconName="CRANE_ARM2_TRANSLATE"/>
+				<controls groupIndex="2" axis="AXIS_CRANE_ARM2" invertAxis="true" mouseSpeedFactor="1" iconName="CRANE_ARM1_TRANSLATE"/>
 				<animation animName="FlexStempel" animAcceleration="1" animSpeed="1.5" />
 			</movingTool>
         </movingTools>
@@ -913,11 +1063,15 @@
                 <translatingPart node="grabHydraulicPunch"/>
             </movingPart>
             <movingPart node="grabConnectionArm" referencePoint="grabConnectionArmRef" referenceFrame="grabConnectionArmRefFrame" isActiveDirty="true" maxUpdateDistance="60"/>
-            <!-- crawlers -->
-            <movingPart node="crawlerFrontLeftRot" referencePoint="frontLeftBoggieFrontWheel" referenceFrame="crawlerFrontLeftRotRefFrame" isActiveDirty="true" maxUpdateDistance="200"/>
+			
+			
+			<movingPart node="0>0|3|0" referenceFrame="0>0|3" alignToWorldY="true" limitedAxis="2" minRot="-5" maxRot="5" isActiveDirty="true" maxUpdateDistance="150" />
+
+			<!-- crawlers -->
+            <movingPart node="crawlerFrontLeftRot"  referencePoint="frontLeftBoggieFrontWheel"  referenceFrame="crawlerFrontLeftRotRefFrame"  isActiveDirty="true" maxUpdateDistance="200"/>
             <movingPart node="crawlerFrontRightRot" referencePoint="frontRightBoggieFrontWheel" referenceFrame="crawlerFrontRightRotRefFrame" isActiveDirty="true" maxUpdateDistance="200"/>
-            <movingPart node="crawlerBackLeftRot" referencePoint="backLeftBoggieFrontWheel" referenceFrame="crawlerBackRightRotRefFrame" isActiveDirty="true" maxUpdateDistance="200"/>
-            <movingPart node="crawlerBackRightRot" referencePoint="backRightBoggieFrontWheel" referenceFrame="crawlerBackRightRotRefFrame" isActiveDirty="true" maxUpdateDistance="200"/>
+            <movingPart node="crawlerBackLeftRot"   referencePoint="backLeftBoggieFrontWheel"   referenceFrame="crawlerBackRightRotRefFrame"   isActiveDirty="true" maxUpdateDistance="200"/>
+            <movingPart node="crawlerBackRightRot"  referencePoint="backRightBoggieFrontWheel"  referenceFrame="crawlerBackRightRotRefFrame"  isActiveDirty="true" maxUpdateDistance="200"/>
             <movingPart node="1>0|3|6" referencePoint="1>0|3|7" referenceFrame="0>" isActiveDirty="true" limitedAxis="1" maxUpdateDistance="75"/>
             <movingPart node="jointZRotHydraulicLeft" referencePoint="jointZRotHydraulicLeftRef" referenceFrame="jointZRotHydraulicLeftRef" isActiveDirty="true" maxUpdateDistance="75">
                 <translatingPart node="jointZRotHydraulicLeftPunch"/>
@@ -956,9 +1110,10 @@
             <movingPart node="upperStairArm" referencePoint="upperStairArmRef" referenceFrame="upperStairArmRef"/>
             <movingPart node="wiperFrontArm02" referencePoint="wiperFrontArm02Ref" referenceFrame="wiperFrontArm02Ref" scaleZ="true"/>
             <movingPart node="wiperBackArm02" referencePoint="wiperBackArm02Ref" referenceFrame="wiperBackArm02Ref" scaleZ="true"/>
-			<movingPart node="craneCameraRot" referencePoint="1>0|3|4|0|0|0|0|0|4" referenceFrame="craneCameraRotRefFrame" isActiveDirty="true" maxUpdateDistance="30"/>
-			<movingPart node="followCraneRot" referencePoint="grabConnectionArmRefFrame" referenceFrame="seat" isActiveDirty="true" maxUpdateDistance="30"/>
-			<movingPart node="1>0|3|4|3|0" referencePoint="1>0|3|4|0|0|0|0|0|4" referenceFrame="1>0|3|4|3" isActiveDirty="true" maxUpdateDistance="30"/>
+			<movingPart node="1>0|3|4|8|0" referencePoint="1>0|3|4|0|0|0|0|5" referenceFrame="1>0|3|4|8" isActiveDirty="true" maxUpdateDistance="35"/>
+			<movingPart node="craneCameraRot" referencePoint="1>0|3|4|0|0|0|0|5" referenceFrame="1>0|3|4|9" isActiveDirty="true" maxUpdateDistance="35"/>
+            <movingPart node="followCrane" referencePoint="clawJoint1" referenceFrame="seat" isActiveDirty="true" maxUpdateDistance="35" />
+            <movingPart node="craneAlignment" referencePoint="cameraTarget" referenceFrame="seat" isActiveDirty="true" maxUpdateDistance="35" /> 
         </movingParts>
         <dashboards>
             <dashboard displayType="ROT" valueType="movingTool" node="joystickLeft" rotAxis="1" minRot="20" maxRot="-20" axis="AXIS_CRANE_ARM3" doInterpolation="true" groups="MOTOR_ACTIVE"/>
@@ -988,9 +1143,24 @@
 	
 	<foldable>
         <foldingConfigurations>
-            <foldingConfiguration>
+            <foldingConfiguration name="$l10n_configuration_valueDesign01">
                 <foldingParts startMoveDirection="1" objectText="FlexBunk">
-                    <foldingPart animationName="FlexOpen" speedScale="1"/>
+                    <foldingPart animationName="FlexOpen1" speedScale="1"/>
+                </foldingParts>
+            </foldingConfiguration>
+			<foldingConfiguration name="$l10n_configuration_valueDesign02">
+                <foldingParts startMoveDirection="1" objectText="FlexBunk">
+                    <foldingPart animationName="FlexOpen2" speedScale="1"/>
+                </foldingParts>
+            </foldingConfiguration>
+			<foldingConfiguration name="$l10n_configuration_valueDesign03">
+                <foldingParts startMoveDirection="1" objectText="FlexBunk">
+                    <foldingPart animationName="FlexOpen3" speedScale="1"/>
+                </foldingParts>
+            </foldingConfiguration>
+			<foldingConfiguration name="$l10n_configuration_valueDesign04">
+                <foldingParts startMoveDirection="1" objectText="FlexBunk">
+                    <foldingPart animationName="FlexOpen4" speedScale="1"/>
                 </foldingParts>
             </foldingConfiguration>
         </foldingConfigurations>
@@ -1004,6 +1174,7 @@
         </animation>
         <animation name="reverseDriving">
             <part node="seatRot" startTime="0" endTime="3" startRot="0 0 0" endRot="0 180 0"/>
+            <part node="cameraTarget" startTime="2.7" endTime="3" startTrans="0 0 0" endTrans="0 0 1"/>
             <sound template="hydraulicLayerTone" startTime="0.01" endTime="2.99" pitchScale="0.2" fadeIn="0.1" fadeOut="0.05" direction="0" linkNode="seatRot">
                 <volume indoor="1.5" outdoor="0.00"/>
             </sound>
@@ -1046,7 +1217,7 @@
             <sound template="wiper1" startTime="0" endTime="1" direction="1" volumeScale="1" pitchScale="0.7" fadeOut="0.1" linkNode="wiperBackArm01"/>
             <sound template="wiper2" startTime="0" endTime="1" direction="-1" volumeScale="1" pitchScale="0.7" fadeOut="0.1" linkNode="wiperBackArm01"/>
         </animation>
-		<animation name="FlexOpen">
+		<animation name="FlexOpen1">
             <part node="1>0|8|1|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
             <part node="1>0|8|2|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
 			<part node="1>0|8|3|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
@@ -1055,6 +1226,42 @@
             <part node="1>0|8|2|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
 			<part node="1>0|8|3|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
 			<part node="1>0|8|4|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
+			<part node="1>0|8|0|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
+			<part node="1>0|8|0|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
+        </animation>
+		<animation name="FlexOpen2">
+            <part node="1>0|8|1|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
+            <part node="1>0|8|2|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
+			<part node="1>0|8|3|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
+			<part node="1>0|8|4|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
+			<part node="1>0|8|1|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
+            <part node="1>0|8|2|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
+			<part node="1>0|8|3|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
+			<part node="1>0|8|4|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
+			<part node="1>0|8|0|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
+			<part node="1>0|8|0|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
+        </animation>
+		<animation name="FlexOpen3">
+            <part node="1>0|8|1|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
+            <part node="1>0|8|2|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
+			<part node="1>0|8|3|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
+			<part node="1>0|8|4|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
+			<part node="1>0|8|1|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
+            <part node="1>0|8|2|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
+			<part node="1>0|8|3|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
+			<part node="1>0|8|4|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
+			<part node="1>0|8|0|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
+			<part node="1>0|8|0|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
+        </animation>
+		<animation name="FlexOpen4">
+            <part node="1>0|8|1|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
+            <part node="1>0|8|2|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
+			<part node="1>0|8|3|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
+			<part node="1>0|8|4|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
+			<part node="1>0|8|1|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
+            <part node="1>0|8|2|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
+			<part node="1>0|8|3|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
+			<part node="1>0|8|4|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
 			<part node="1>0|8|0|0" startTime="0" endTime="2" startRot="0 0 0" endRot="0 90 0"/>
 			<part node="1>0|8|0|1" startTime="0" endTime="2" startRot="0 0 0" endRot="0 -90 0"/>
         </animation>
@@ -1072,23 +1279,23 @@
             <part node="transArm1Chain" startTime="0.0" endTime="1.0" shaderParameter="uvScale" shaderStartValues="0.1 1 0 0" shaderEndValues="5 1 0 0"/>
         </animation>
 		<animation name="SBFront">
-            <part node="0>0|3|7|0|0" startTime="0" endTime="2" startTrans="0 0 0" endTrans="0 -0.36 0" />
-            <part node="0>0|3|7|0|0|0" startTime="0" endTime="2" startScale="1 0.131 1" endScale="1 1 1" />
-			<part node="0>0|3|7|0|1" startTime="0" endTime="2" startRot="0 0 0" endRot="360 0 0" />
+            <part node="0>0|3|0|0|7|0|0" startTime="0" endTime="2" startTrans="0 0 0" endTrans="0 -0.36 0" />
+            <part node="0>0|3|0|0|7|0|0|0" startTime="0" endTime="2" startScale="1 0.131 1" endScale="1 1 1" />
+			<part node="0>0|3|0|0|7|0|1" startTime="0" endTime="2" startRot="0 0 0" endRot="360 0 0" />
         </animation>
 		<animation name="SonnenSchutz">
-			<part node="0>0|3|7|1|0|0" startTime="0" endTime="2" startScale="1 0.02 1" endScale="1 1 1" />
-            <part node="0>0|3|7|1|0|1" startTime="0" endTime="2" startTrans="0 0.027 -0.016" endTrans="0 1.101 -0.016" />
-			<part node="0>0|3|7|2|0|0" startTime="0" endTime="2" startScale="1 0.011 1" endScale="1 1 1" />
-            <part node="0>0|3|7|2|0|1" startTime="0" endTime="2" startTrans="0 0.012 0" endTrans="0 1.259 0" />
-			<part node="0>0|3|7|3|0|0" startTime="0" endTime="2" startScale="1 0.011 1" endScale="1 1 1"  />
-            <part node="0>0|3|7|3|0|1" startTime="0" endTime="2" startTrans="0.011 0.015 0.028" endTrans="0.011 1.25 0.028" />
-			<part node="0>0|3|7|4|0|0" startTime="0" endTime="2" startScale="1 0.011 1" endScale="1 1 1"  />
-            <part node="0>0|3|7|4|0|1" startTime="0" endTime="2" startTrans="-0.011 0.015 0.028" endTrans="-0.011 1.25 0.028" />
-			<part node="0>0|3|7|5|0|0" startTime="0" endTime="2" startScale="1 0.013 1" endScale="1 1 1"  />
-            <part node="0>0|3|7|5|0|1" startTime="0" endTime="2" startTrans="0.004 0.015 -0.06" endTrans="0.004 1.274 -0.06" />
-			<part node="0>0|3|7|6|0|0" startTime="0" endTime="2" startScale="1 0.001 1" endScale="1 1 1"  />
-            <part node="0>0|3|7|6|0|1" startTime="0" endTime="2" startTrans="0.001 0.015 -0.089" endTrans="0.001 1.228 -0.089" startRot="2.207 0 0" endRot="0 0 0"/>
+			<part node="0>0|3|0|0|7|1|0|0" startTime="0" endTime="2" startScale="1 0.02 1" endScale="1 1 1" />
+            <part node="0>0|3|0|0|7|1|0|1" startTime="0" endTime="2" startTrans="0 0.027 -0.016" endTrans="0 1.101 -0.016" />
+			<part node="0>0|3|0|0|7|2|0|0" startTime="0" endTime="2" startScale="1 0.011 1" endScale="1 1 1" />
+            <part node="0>0|3|0|0|7|2|0|1" startTime="0" endTime="2" startTrans="0 0.012 0" endTrans="0 1.259 0" />
+			<part node="0>0|3|0|0|7|3|0|0" startTime="0" endTime="2" startScale="1 0.011 1" endScale="1 1 1"  />
+            <part node="0>0|3|0|0|7|3|0|1" startTime="0" endTime="2" startTrans="0.011 0.015 0.028" endTrans="0.011 1.25 0.028" />
+			<part node="0>0|3|0|0|7|4|0|0" startTime="0" endTime="2" startScale="1 0.011 1" endScale="1 1 1"  />
+            <part node="0>0|3|0|0|7|4|0|1" startTime="0" endTime="2" startTrans="-0.011 0.015 0.028" endTrans="-0.011 1.25 0.028" />
+			<part node="0>0|3|0|0|7|5|0|0" startTime="0" endTime="2" startScale="1 0.013 1" endScale="1 1 1"  />
+            <part node="0>0|3|0|0|7|5|0|1" startTime="0" endTime="2" startTrans="0.004 0.015 -0.06" endTrans="0.004 1.274 -0.06" />
+			<part node="0>0|3|0|0|7|6|0|0" startTime="0" endTime="2" startScale="1 0.001 1" endScale="1 1 1"  />
+            <part node="0>0|3|0|0|7|6|0|1" startTime="0" endTime="2" startTrans="0.001 0.015 -0.089" endTrans="0.001 1.228 -0.089" startRot="2.207 0 0" endRot="0 0 0"/>
         </animation>
 		<animation name="craneCamSideAnim">
             <part node="craneCameraRot" startTime="0.00" endTime="0.40" startTrans="-1.5 0 0" endTrans="-1 0 0"/>
@@ -1101,13 +1308,12 @@
     <suspensions>
         <suspension node="seat" weight="150" minTranslation="-0.05 -0.15 0.0" maxTranslation="0.05 0.15 0.0" suspensionParametersX="20 4" suspensionParametersY="5 1" suspensionParametersZ="20 4"/>
         <suspension useCharacterTorso="true" weight="90" minRotation="0 -5 -5" maxRotation="0 5 5" suspensionParametersY="7 1" suspensionParametersZ="7 1"/>
-		<suspension node="0>0|3"             weight="300" minRotation="-0.3 0 -0.5" maxRotation="0.3 0 0.5" minTranslation="0 -0.03 0.0" maxTranslation="0 0.02 0.0" suspensionParametersX="20 4" suspensionParametersY="5 1" suspensionParametersZ="20 4"/>
     </suspensions>
 	
     <tensionBelts>
         <tensionBeltsConfigurations>
             <tensionBeltsConfiguration>
-                <tensionBelts linkNode="tensionBelts" rootNode="forwarder875_back_component2" jointNode="forwarder875_back_component2" maxEdgeLength="0.1" geometryBias="0.01" ratchetPosition="0.2" defaultOffset="-0.45" defaultOffsetSide="0.1" defaultHeight="3" interactionRadius="1.75" totalInteractionRadius="3.5" activationTrigger="beltActivationTrigger">
+                <tensionBelts linkNode="tensionBelts" rootNode="forwarder875_back_component2" jointNode="forwarder875_back_component2" maxEdgeLength="0.1" geometryBias="0.01" ratchetPosition="0.2" defaultOffset="-0.85" defaultOffsetSide="0.1" defaultHeight="4" interactionRadius="1.75" totalInteractionRadius="3.5" activationTrigger="beltActivationTrigger" allowFoldingWhileFasten="false">
                     <tensionBelt startNode="beltStart1" endNode="beltEnd1" offsetLeft="0.85"/>
                     <tensionBelt startNode="beltStart2" endNode="beltEnd2"/>
                     <tensionBelt startNode="beltStart3" endNode="beltEnd3" offsetRight="0.85"/>
@@ -1129,7 +1335,7 @@
         </groups>
         <default>
             <dashboard displayType="EMITTER" node="dashboardDisplay" idleValue="-5" intensity="0.3" groups="MOTOR_ACTIVE"/>
-			<dashboard displayType="EMITTER" node="0>0|3|2|2|0|0" idleValue="-5" intensity="0.3" groups="MOTOR_ACTIVE"/>
+			<dashboard displayType="EMITTER" node="0>0|3|0|0|2|2|0|0" idleValue="-5" intensity="0.3" groups="MOTOR_ACTIVE"/>
             <dashboard displayType="EMITTER" node="cabinDecalsLight" idleValue="0" intensity="0.3" groups="MOTOR_ACTIVE"/>
             <dashboard displayType="VISIBILITY" node="numbers" groups="MOTOR_ACTIVE"/>
         </default>
@@ -1152,10 +1358,10 @@
         <material name="forwarder875_mat" baseNode="forwarder875_vis">
             <shaderParameter name="colorMat0" value="KOMATSU_REDMETAL"/>
         </material>
-		<material name="forwarder875Interior_mat" baseNode="0>0|3|6">
+		<material name="forwarder875Interior_mat" baseNode="0>0|3|0|0|6">
             <shaderParameter name="colorMat0" value="KOMATSU_REDMETAL"/>
         </material>
-		<material name="forwarder875Grill_mat" baseNode="0>0|3|10|0">
+		<material name="forwarder875Grill_mat" baseNode="0>0|3|0|0|10|0">
             <shaderParameter name="colorMat0" value="KOMATSU_REDMETAL"/>
         </material>
 		<material name="track_mat" baseNode="0>1|2|0|0">
@@ -1166,6 +1372,9 @@
         </material>
 		<material name="HRFF_Komatsu_Bauteile" baseNode="1>0|8|1|0">
             <shaderParameter name="colorMat0" value="KOMATSU_REDMETAL"/>
+        </material>
+		<material name="f20DAnimatedParts_mat" baseNode="1>0|3|4|0|0|0|0|0|0|0|0|1|3">
+            <shaderParameter name="colorMat0" value="ROTTNE_ORANGE1"/>
         </material>
     </baseMaterial>
 	
@@ -1180,7 +1389,7 @@
 		<baseMaterialConfiguration name="MAN Beige" material="0" color="0.3021 0.2549 0.1734 0" price="1500"/>
 		<baseMaterialConfiguration name="$l10n_BLACK" material="0" color="0 0 0 0" price="1500"/>
 		<baseMaterialConfiguration name="TATRA" material="0" color="0.0200 0.2800 0.1900 0" price="1500"/>
-		<baseMaterialConfiguration name="$l10n_BROWN" material="0" color="0.0886 0.0203 0.0012 0" price="1500"/>
+		<baseMaterialConfiguration name="$l10n_BROWN2" material="0" color="0.0886 0.0203 0.0012 0" price="1500"/>
 		<baseMaterialConfiguration name="$l10n_BLUE1" material="0" color="0.0000 0.4047 0.7519 0" price="1500"/>
 		<baseMaterialConfiguration name="$l10n_BLUE2" material="0" color="0.0055 0.0170 0.0265 0" price="1500"/>
 		<baseMaterialConfiguration name="$l10n_BLUE3" material="0" color="0.0019 0.0059 0.0090 0" price="1500"/>
@@ -1188,7 +1397,7 @@
 		<baseMaterialConfiguration name="$l10n_GREEN2" material="0" color="0.0265 0.6592 0.3204 0" price="1500"/>
 		<baseMaterialConfiguration name="$l10n_GREEN3" material="0" color="0.0072 0.2758 0.0528 0" price="1500"/>
 		<baseMaterialConfiguration name="$l10n_GREEN4" material="0" color="0.0000 1.0000 0.0415 0" price="1500"/>
-		<baseMaterialConfiguration name="Pink" material="0" color="0.5924 0.1871 0.3723 0" price="1500"/>
+		<baseMaterialConfiguration name="$l10n_Pink" material="0" color="0.5924 0.1871 0.3723 0" price="1500"/>
 		<baseMaterialConfiguration name="$l10n_PINK/RED" material="0" color="0.8751 0.0017 0.0303 0" price="1500"/>
 		<baseMaterialConfiguration name="$l10n_BERRY" material="0" color="0.1087 0.0210 0.0370 0" price="1500"/>
 		<baseMaterialConfiguration name="$l10n_WHITE" material="0" color="1.0000 1.0000 1.0000 0" price="1500"/>
@@ -1232,8 +1441,71 @@
 		<material name="forwarder875_mat" shaderParameter="colorMat0"/>
 		<material name="forwarder875Interior_mat" shaderParameter="colorMat0"/>
 		<material name="forwarder875Grill_mat" shaderParameter="colorMat0"/>
-		<material name="HRFF_Komatsu_Bauteile" shaderParameter="colorMat0"/>
     </baseMaterialConfigurations>
+	
+	<designMaterialConfigurations price="1500" useDefaultColors="true" defaultColorIndex="3" title="$l10n_Zange">
+		<designMaterialConfiguration name="$l10n_KOMATSU_RED" color="KOMATSU_REDMETAL" material="0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_configuration_chassisColor" material="16" color="0.0296 0.0296 0.0319 16" price="1500" />
+		<designMaterialConfiguration name="$l10n_SPECIALBLUE2" material="0" color="0 0.09 0.09 0" price="1500" />
+        <designMaterialConfiguration name="$l10n_SPECIALBLUE1" material="0" color="0 0 1 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_SPECIALYELLOW" material="0" color="1.0000 0.7231 0.0000 0" price="1500" />
+		<designMaterialConfiguration name="$l10n_SPECIALGREEN" material="0" color="0.488 0.687 0.027" price="1500" />
+        <designMaterialConfiguration name="$l10n_MANRED" material="0" color="0.5605 0.0037 0.0037 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_MANOLDGREEN" material="0" color="0.1878 0.3006 0.2159 0" price="1500"/>
+		<designMaterialConfiguration name="MAN Beige" material="0" color="0.3021 0.2549 0.1734 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_BLACK" material="0" color="0 0 0 0" price="1500"/>
+		<designMaterialConfiguration name="TATRA" material="0" color="0.0200 0.2800 0.1900 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_BROWN" material="0" color="0.0886 0.0203 0.0012 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_BLUE1" material="0" color="0.0000 0.4047 0.7519 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_BLUE2" material="0" color="0.0055 0.0170 0.0265 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_BLUE3" material="0" color="0.0019 0.0059 0.0090 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_GREEN1" material="0" color="0.1070 0.2086 0.2462 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_GREEN2" material="0" color="0.0265 0.6592 0.3204 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_GREEN3" material="0" color="0.0072 0.2758 0.0528 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_GREEN4" material="0" color="0.0000 1.0000 0.0415 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_Pink" material="0" color="0.5924 0.1871 0.3723 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_PINK/RED" material="0" color="0.8751 0.0017 0.0303 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_BERRY" material="0" color="0.1087 0.0210 0.0370 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_WHITE" material="0" color="1.0000 1.0000 1.0000 0" price="1500"/>
+		<designMaterialConfiguration name="Orange" material="0" color="0.9157 0.1220 0.0066 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_DARKGRAY" material="0" color="0.1220 0.1199 0.1199 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_YELLOW1" material="0" color="0.8913 0.6456 0.2120 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_YELLOW2" material="0" color="0.5054 0.3066 0.0231 0" price="1500"/>
+		<designMaterialConfiguration name="$l10n_YELLOW3" material="0" color="0.8227 0.9131 0.0000 0" price="1500"/>
+		<designMaterialConfiguration name="Violet 1" material="0" color="0.0802 0.0513 0.7231 0" price="1500"/>
+		<designMaterialConfiguration name="Violet 2" material="0" color="0.0090 0.0014 0.0619 0" price="1500"/>
+		<designMaterialConfiguration name="NAVY" material="0" color="0.0529 0.0865 0.0242 1" price="1500"/>
+		<designMaterialConfiguration name="$l10n_SPECIALBLUE1METAL" material="27" color="0 0 1 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_SPECIALYELLOWMETAL" material="27" color="1.0000 0.7231 0.0000 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_SPECIALBLUE2METAL" material="27" color="0 0.09 0.09 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_SPECIALGREENMETAL" material="27" color="0.488 0.687 0.027" price="2500" />
+		<designMaterialConfiguration name="$l10n_MANREDMETAL" material="27" color="0.5605 0.0037 0.0037 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_MANOLDGREENMETAL" material="27" color="0.1878 0.3006 0.2159 0" price="2500"/>
+		<designMaterialConfiguration name="MAN Beige Metal" material="27" color="0.3021 0.2549 0.1734 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_BLACKMETAL" material="27" color="0 0 0 0" price="2500"/>
+		<designMaterialConfiguration name="TATRA Metal" material="27" color="0.0200 0.2800 0.1900 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_BROWNMETAL" material="27" color="0.0886 0.0203 0.0012 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_BLUE1METAL" material="27" color="0.0000 0.4047 0.7519 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_BLUE2METAL" material="27" color="0.0055 0.0170 0.0265 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_BLUE3METAL" material="27" color="0.0019 0.0059 0.0090 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_GREEN1METAL" material="27" color="0.1070 0.2086 0.2462 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_GREEN2METAL" material="27" color="0.0265 0.6592 0.3204 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_GREEN3METAL" material="27" color="0.0072 0.2758 0.0528 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_GREEN4METAL" material="27" color="0.0000 1.0000 0.0415 0" price="2500"/>
+		<designMaterialConfiguration name="Pink Metal" material="27" color="0.5924 0.1871 0.3723 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_PINK/REDMETAL" material="27" color="0.8751 0.0017 0.0303 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_BERRYMETAL" material="27" color="0.1087 0.0210 0.0370 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_WHITEMETAL" material="27" color="1.0000 1.0000 1.0000 0" price="2500"/>
+		<designMaterialConfiguration name="Orange Metal" material="27" color="0.9157 0.1220 0.0066 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_DARKGRAYMETAL" material="27" color="0.1220 0.1199 0.1199 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_YELLOW1METAL" material="27" color="0.8913 0.6456 0.2120 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_YELLOW2METAL" material="27" color="0.5054 0.3066 0.0231 0" price="2500"/>
+		<designMaterialConfiguration name="$l10n_YELLOW3METAL" material="27" color="0.8227 0.9131 0.0000 0" price="2500"/>
+		<designMaterialConfiguration name="Violet 1 Metal" material="27" color="0.0802 0.0513 0.7231 0" price="2500"/>
+		<designMaterialConfiguration name="Violet 2 Metal" material="27" color="0.0090 0.0014 0.0619 0" price="2500"/>
+		<designMaterialConfiguration name="NAVY Metal" material="27" color="0.0529 0.0865 0.0242 1" price="2500"/>
+		<material name="f20DAnimatedParts_mat" shaderParameter="colorMat0"/>
+    </designMaterialConfigurations>
     
 	<designMaterial2Configurations price="1500" useDefaultColors="true" defaultColorIndex="0" title="$l10n_Bander">
 		<designMaterial2Configuration name="OLOFSFORS" color="OLOFSFORS_BLUE1" material="0" price="0"/>
@@ -1247,7 +1519,7 @@
 		<designMaterial2Configuration name="MAN Beige" material="0" color="0.3021 0.2549 0.1734 0" price="1500"/>
 		<designMaterial2Configuration name="$l10n_BLACK" material="0" color="0 0 0 0" price="1500"/>
 		<designMaterial2Configuration name="TATRA" material="0" color="0.0200 0.2800 0.1900 0" price="1500"/>
-		<designMaterial2Configuration name="$l10n_BROWN" material="0" color="0.0886 0.0203 0.0012 0" price="1500"/>
+		<designMaterial2Configuration name="$l10n_BROWN2" material="0" color="0.0886 0.0203 0.0012 0" price="1500"/>
 		<designMaterial2Configuration name="$l10n_BLUE1" material="0" color="0.0000 0.4047 0.7519 0" price="1500"/>
 		<designMaterial2Configuration name="$l10n_BLUE2" material="0" color="0.0055 0.0170 0.0265 0" price="1500"/>
 		<designMaterial2Configuration name="$l10n_BLUE3" material="0" color="0.0019 0.0059 0.0090 0" price="1500"/>
@@ -1255,7 +1527,7 @@
 		<designMaterial2Configuration name="$l10n_GREEN2" material="0" color="0.0265 0.6592 0.3204 0" price="1500"/>
 		<designMaterial2Configuration name="$l10n_GREEN3" material="0" color="0.0072 0.2758 0.0528 0" price="1500"/>
 		<designMaterial2Configuration name="$l10n_GREEN4" material="0" color="0.0000 1.0000 0.0415 0" price="1500"/>
-		<designMaterial2Configuration name="Pink" material="0" color="0.5924 0.1871 0.3723 0" price="1500"/>
+		<designMaterial2Configuration name="$l10n_Pink" material="0" color="0.5924 0.1871 0.3723 0" price="1500"/>
 		<designMaterial2Configuration name="$l10n_PINK/RED" material="0" color="0.8751 0.0017 0.0303 0" price="1500"/>
 		<designMaterial2Configuration name="$l10n_BERRY" material="0" color="0.1087 0.0210 0.0370 0" price="1500"/>
 		<designMaterial2Configuration name="$l10n_WHITE" material="0" color="1.0000 1.0000 1.0000 0" price="1500"/>
@@ -1271,21 +1543,90 @@
 		<material name="proGrip_mat" shaderParameter="colorMat0"/>
 	</designMaterial2Configurations>
 	
-	<designConfigurations title="$l10n_Schutz">
-		<designConfiguration name="$l10n_ui_no" price="0" >
+	<designMaterial3Configurations price="1000" useDefaultColors="true" defaultColorIndex="0" title="$l10n_Bunk">
+		<designMaterial3Configuration name="$l10n_KOMATSU_RED" color="KOMATSU_REDMETAL" material="0" price="0"/>
+		<designMaterial3Configuration name="$l10n_ui_colorStainlessSteel" material="8" color="SHARED_SILVER" price="1000"/>
+		<designMaterial3Configuration name="$l10n_configuration_chassisColor" material="16" color="0.0296 0.0296 0.0319 16" price="1000" />
+		<designMaterial3Configuration name="$l10n_SPECIALBLUE2" material="0" color="0 0.09 0.09 0" price="1000" />
+        <designMaterial3Configuration name="$l10n_SPECIALBLUE1" material="0" color="0 0 1 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_SPECIALYELLOW" material="0" color="1.0000 0.7231 0.0000 0" price="1000" />
+		<designMaterial3Configuration name="$l10n_SPECIALGREEN" material="0" color="0.488 0.687 0.027" price="1000" />
+        <designMaterial3Configuration name="$l10n_MANRED" material="0" color="0.5605 0.0037 0.0037 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_MANOLDGREEN" material="0" color="0.1878 0.3006 0.2159 0" price="1000"/>
+		<designMaterial3Configuration name="MAN Beige" material="0" color="0.3021 0.2549 0.1734 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_BLACK" material="0" color="0 0 0 0" price="1000"/>
+		<designMaterial3Configuration name="TATRA" material="0" color="0.0200 0.2800 0.1900 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_BROWN" material="0" color="0.0886 0.0203 0.0012 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_BLUE1" material="0" color="0.0000 0.4047 0.7519 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_BLUE2" material="0" color="0.0055 0.0170 0.0265 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_BLUE3" material="0" color="0.0019 0.0059 0.0090 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_GREEN1" material="0" color="0.1070 0.2086 0.2462 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_GREEN2" material="0" color="0.0265 0.6592 0.3204 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_GREEN3" material="0" color="0.0072 0.2758 0.0528 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_GREEN4" material="0" color="0.0000 1.0000 0.0415 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_Pink" material="0" color="0.5924 0.1871 0.3723 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_PINK/RED" material="0" color="0.8751 0.0017 0.0303 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_BERRY" material="0" color="0.1087 0.0210 0.0370 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_WHITE" material="0" color="1.0000 1.0000 1.0000 0" price="1000"/>
+		<designMaterial3Configuration name="Orange" material="0" color="0.9157 0.1220 0.0066 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_DARKGRAY" material="0" color="0.1220 0.1199 0.1199 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_YELLOW1" material="0" color="0.8913 0.6456 0.2120 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_YELLOW2" material="0" color="0.5054 0.3066 0.0231 0" price="1000"/>
+		<designMaterial3Configuration name="$l10n_YELLOW3" material="0" color="0.8227 0.9131 0.0000 0" price="1000"/>
+		<designMaterial3Configuration name="Violet 1" material="0" color="0.0802 0.0513 0.7231 0" price="1000"/>
+		<designMaterial3Configuration name="Violet 2" material="0" color="0.0090 0.0014 0.0619 0" price="1000"/>
+		<designMaterial3Configuration name="NAVY" material="0" color="0.0529 0.0865 0.0242 1" price="1000"/>
+		<designMaterial3Configuration name="$l10n_SPECIALBLUE1METAL" material="27" color="0 0 1 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_SPECIALYELLOWMETAL" material="27" color="1.0000 0.7231 0.0000 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_SPECIALBLUE2METAL" material="27" color="0 0.09 0.09 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_SPECIALGREENMETAL" material="27" color="0.488 0.687 0.027" price="1200" />
+		<designMaterial3Configuration name="$l10n_MANREDMETAL" material="27" color="0.5605 0.0037 0.0037 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_MANOLDGREENMETAL" material="27" color="0.1878 0.3006 0.2159 0" price="1200"/>
+		<designMaterial3Configuration name="MAN Beige Metal" material="27" color="0.3021 0.2549 0.1734 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_BLACKMETAL" material="27" color="0 0 0 0" price="1200"/>
+		<designMaterial3Configuration name="TATRA Metal" material="27" color="0.0200 0.2800 0.1900 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_BROWNMETAL" material="27" color="0.0886 0.0203 0.0012 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_BLUE1METAL" material="27" color="0.0000 0.4047 0.7519 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_BLUE2METAL" material="27" color="0.0055 0.0170 0.0265 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_BLUE3METAL" material="27" color="0.0019 0.0059 0.0090 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_GREEN1METAL" material="27" color="0.1070 0.2086 0.2462 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_GREEN2METAL" material="27" color="0.0265 0.6592 0.3204 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_GREEN3METAL" material="27" color="0.0072 0.2758 0.0528 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_GREEN4METAL" material="27" color="0.0000 1.0000 0.0415 0" price="1200"/>
+		<designMaterial3Configuration name="Pink Metal" material="27" color="0.5924 0.1871 0.3723 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_PINK/REDMETAL" material="27" color="0.8751 0.0017 0.0303 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_BERRYMETAL" material="27" color="0.1087 0.0210 0.0370 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_WHITEMETAL" material="27" color="1.0000 1.0000 1.0000 0" price="1200"/>
+		<designMaterial3Configuration name="Orange Metal" material="27" color="0.9157 0.1220 0.0066 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_DARKGRAYMETAL" material="27" color="0.1220 0.1199 0.1199 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_YELLOW1METAL" material="27" color="0.8913 0.6456 0.2120 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_YELLOW2METAL" material="27" color="0.5054 0.3066 0.0231 0" price="1200"/>
+		<designMaterial3Configuration name="$l10n_YELLOW3METAL" material="27" color="0.8227 0.9131 0.0000 0" price="1200"/>
+		<designMaterial3Configuration name="Violet 1 Metal" material="27" color="0.0802 0.0513 0.7231 0" price="1200"/>
+		<designMaterial3Configuration name="Violet 2 Metal" material="27" color="0.0090 0.0014 0.0619 0" price="1200"/>
+		<designMaterial3Configuration name="NAVY Metal" material="27" color="0.0529 0.0865 0.0242 1" price="1200"/>
+		<material name="HRFF_Komatsu_Bauteile" shaderParameter="colorMat0"/>
+    </designMaterial3Configurations>
+	
+	<design5Configurations title="$l10n_Schutz">
+		<design5Configuration name="$l10n_ui_no" price="0" >
 			<objectChange node="0>0|12" visibilityActive="false" visibilityInactive="true"/>
-		</designConfiguration>
-        <designConfiguration name="$l10n_ui_yes" price="1500" >
+        </design5Configuration>
+        <design5Configuration name="$l10n_ui_yes" price="1000">
 			<objectChange node="0>0|12" visibilityActive="true" visibilityInactive="false"/>
-		</designConfiguration>
-    </designConfigurations>
+        </design5Configuration>
+		<design5Configuration name="$l10n_Feuerloscher" price="1250">
+			<objectChange node="0>0|12" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="0>0|12|4" visibilityActive="true" visibilityInactive="false"/>
+        </design5Configuration>
+    </design5Configurations>
 	
 	<design2Configurations title="$l10n_DoorDecal">
 		<design2Configuration name="$l10n_ui_no" price="0" >
-			<objectChange node="0>0|3|10|6" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="0>0|3|0|0|10|6" visibilityActive="false" visibilityInactive="true"/>
 		</design2Configuration>
         <design2Configuration name="$l10n_ui_yes" price="100" >
-			<objectChange node="0>0|3|10|6" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="0>0|3|0|0|10|6" visibilityActive="true" visibilityInactive="false"/>
 		</design2Configuration>
     </design2Configurations>
 	
@@ -1313,50 +1654,51 @@
         <i3dMapping id="highBeamLow" node="0>0|2|2|1"/>
         <i3dMapping id="frontLightHigh" node="0>0|2|2|2"/>
         <i3dMapping id="highBeamHigh" node="0>0|2|2|3"/>
-        <i3dMapping id="workLightFrontLow" node="0>0|3|8|0|0"/>
-        <i3dMapping id="workLightBackLow01" node="0>0|3|8|0|2"/>
-        <i3dMapping id="workLightFrontHigh" node="0>0|3|8|0|1"/>
-        <i3dMapping id="workLightBackHigh01" node="0>0|3|8|0|3"/>
-        <i3dMapping id="seatRot" node="0>0|3|0"/>
-        <i3dMapping id="seat" node="0>0|3|0|0"/>
-        <i3dMapping id="playerSkin" node="0>0|3|0|0|0"/>
-        <i3dMapping id="joystickLeft" node="0>0|3|0|0|1"/>
-        <i3dMapping id="playerLeftHandTarget" node="0>0|3|0|0|1|0"/>
-        <i3dMapping id="joystickRight" node="0>0|3|0|0|2"/>
-        <i3dMapping id="playerRightHandTarget" node="0>0|3|0|0|2|0"/>
-        <i3dMapping id="seatDecalsLight" node="0>0|3|0|0|5"/>
-        <i3dMapping id="indoorCamera" node="0>0|3|0|1"/>
-        <i3dMapping id="outdoorCameraTarget" node="0>0|3|0|2"/>
-		<i3dMapping id="followCraneRot" node="0>0|3|0|6" />
-		<i3dMapping id="indoorCamera2" node="0>0|3|0|6|0" />
-        <i3dMapping id="outdoorCamera" node="0>0|3|0|2|0"/>
-        <i3dMapping id="playerRightFootTarget" node="0>0|3|0|3|0"/>
-        <i3dMapping id="playerLeftFootTarget" node="0>0|3|0|3|1"/>
-        <i3dMapping id="wiperFrontArm01" node="0>0|3|1|0|0"/>
-        <i3dMapping id="wiperFront" node="0>0|3|1|0|0|0|0"/>
-        <i3dMapping id="wiperFrontArm02Ref" node="0>0|3|1|0|0|0|0|0"/>
-        <i3dMapping id="wiperFrontArm02" node="0>0|3|1|1"/>
-        <i3dMapping id="wiperBackArm01" node="0>0|3|1|2|0"/>
-        <i3dMapping id="wiperBack" node="0>0|3|1|2|0|0|0"/>
-        <i3dMapping id="wiperBackArm02Ref" node="0>0|3|1|2|0|0|0|0"/>
-        <i3dMapping id="wiperBackArm02" node="0>0|3|1|3"/>
-        <i3dMapping id="dashboardDisplay" node="0>0|3|2|0"/>
-        <i3dMapping id="numbers" node="0>0|3|2|1"/>
-        <i3dMapping id="numbersRpm" node="0>0|3|2|1|0"/>
-        <i3dMapping id="numbersSpeed" node="0>0|3|2|1|1"/>
-        <i3dMapping id="numbersOperatingTime" node="0>0|3|2|1|2"/>
-        <i3dMapping id="numbersTime" node="0>0|3|2|1|3"/>
-        <i3dMapping id="gasPedal" node="0>0|3|3|0|0"/>
-        <i3dMapping id="playerRightFootTargetGasRef" node="0>0|3|3|0|0|0"/>
-        <i3dMapping id="playerRightFootTargetGas" node="0>0|3|3|0|1"/>
-        <i3dMapping id="brakePedal" node="0>0|3|3|1|0"/>
-        <i3dMapping id="playerRightFootTargetBrake" node="0>0|3|3|1|0|0"/>
-        <i3dMapping id="gasPedalRev" node="0>0|3|3|2|0"/>
-        <i3dMapping id="playerRightFootTargetGasRevRef" node="0>0|3|3|2|0|0"/>
-        <i3dMapping id="playerRightFootTargetGasRev" node="0>0|3|3|2|1"/>
-        <i3dMapping id="brakePedalRev" node="0>0|3|3|3|0"/>
-        <i3dMapping id="playerRightFootTargetBrakeRev" node="0>0|3|3|3|0|0"/>
-        <i3dMapping id="extinguisher" node="0>0|3|4"/>
+        <i3dMapping id="workLightFrontLow" node="0>0|3|0|0|8|0|0"/>
+        <i3dMapping id="workLightBackLow01" node="0>0|3|0|0|8|0|2"/>
+        <i3dMapping id="workLightFrontHigh" node="0>0|3|0|0|8|0|1"/>
+        <i3dMapping id="workLightBackHigh01" node="0>0|3|0|0|8|0|3"/>
+        <i3dMapping id="seatRot" node="0>0|3|0|0|0"/>
+        <i3dMapping id="seat" node="0>0|3|0|0|0|0"/>
+        <i3dMapping id="playerSkin" node="0>0|3|0|0|0|0|0"/>
+        <i3dMapping id="joystickLeft" node="0>0|3|0|0|0|0|1"/>
+        <i3dMapping id="playerLeftHandTarget" node="0>0|3|0|0|0|0|1|0"/>
+        <i3dMapping id="joystickRight" node="0>0|3|0|0|0|0|2"/>
+        <i3dMapping id="playerRightHandTarget" node="0>0|3|0|0|0|0|2|0"/>
+        <i3dMapping id="seatDecalsLight" node="0>0|3|0|0|0|0|5"/>
+        <i3dMapping id="craneAlignment" node="0>0|3|0|0|0|1"/>
+        <i3dMapping id="indoorCamera" node="0>0|3|0|0|0|1|0"/>
+        <i3dMapping id="outdoorCameraTarget" node="0>0|3|0|0|0|2"/>
+        <i3dMapping id="outdoorCamera" node="0>0|3|0|0|0|2|0"/>
+        <i3dMapping id="playerRightFootTarget" node="0>0|3|0|0|0|3|0"/>
+        <i3dMapping id="playerLeftFootTarget" node="0>0|3|0|0|0|3|1"/>
+        <i3dMapping id="followCrane" node="0>0|3|0|0|0|6"/>
+        <i3dMapping id="cameraTarget" node="0>0|3|0|0|0|6|0"/>
+        <i3dMapping id="wiperFrontArm01" node="0>0|3|0|0|1|0|0"/>
+        <i3dMapping id="wiperFront" node="0>0|3|0|0|1|0|0|0|0"/>
+        <i3dMapping id="wiperFrontArm02Ref" node="0>0|3|0|0|1|0|0|0|0|0"/>
+        <i3dMapping id="wiperFrontArm02" node="0>0|3|0|0|1|1"/>
+        <i3dMapping id="wiperBackArm01" node="0>0|3|0|0|1|2|0"/>
+        <i3dMapping id="wiperBack" node="0>0|3|0|0|1|2|0|0|0"/>
+        <i3dMapping id="wiperBackArm02Ref" node="0>0|3|0|0|1|2|0|0|0|0"/>
+        <i3dMapping id="wiperBackArm02" node="0>0|3|0|0|1|3"/>
+        <i3dMapping id="dashboardDisplay" node="0>0|3|0|0|2|0"/>
+        <i3dMapping id="numbers" node="0>0|3|0|0|2|1"/>
+        <i3dMapping id="numbersRpm" node="0>0|3|0|0|2|1|0"/>
+        <i3dMapping id="numbersSpeed" node="0>0|3|0|0|2|1|1"/>
+        <i3dMapping id="numbersOperatingTime" node="0>0|3|0|0|2|1|2"/>
+        <i3dMapping id="numbersTime" node="0>0|3|0|0|2|1|3"/>
+        <i3dMapping id="gasPedal" node="0>0|3|0|0|3|0|0"/>
+        <i3dMapping id="playerRightFootTargetGasRef" node="0>0|3|0|0|3|0|0|0"/>
+        <i3dMapping id="playerRightFootTargetGas" node="0>0|3|0|0|3|0|1"/>
+        <i3dMapping id="brakePedal" node="0>0|3|0|0|3|1|0"/>
+        <i3dMapping id="playerRightFootTargetBrake" node="0>0|3|0|0|3|1|0|0"/>
+        <i3dMapping id="gasPedalRev" node="0>0|3|0|0|3|2|0"/>
+        <i3dMapping id="playerRightFootTargetGasRevRef" node="0>0|3|0|0|3|2|0|0"/>
+        <i3dMapping id="playerRightFootTargetGasRev" node="0>0|3|0|0|3|2|1"/>
+        <i3dMapping id="brakePedalRev" node="0>0|3|0|0|3|3|0"/>
+        <i3dMapping id="playerRightFootTargetBrakeRev" node="0>0|3|0|0|3|3|0|0"/>
+        <i3dMapping id="extinguisher" node="0>0|3|0|0|4"/>
         <i3dMapping id="exitPoint" node="0>0|4"/>
         <i3dMapping id="exhaustParticle" node="0>0|5"/>
         <i3dMapping id="upperStair" node="0>0|6|0"/>
@@ -1379,10 +1721,10 @@
         <i3dMapping id="cardanPart04" node="0>0|6|6|0"/>
         <i3dMapping id="cardanPart02Ref" node="0>0|6|6|0|0"/>
         <i3dMapping id="jointZRotRef" node="0>0|6|8"/>
-        <i3dMapping id="mirror01Decal" node="0>0|3|12|0"/>
-        <i3dMapping id="mirror02Decal" node="0>0|3|12|1"/>
-        <i3dMapping id="mirror03Decal" node="0>0|3|12|2"/>
-        <i3dMapping id="cabinDecalsLight" node="0>0|3|11|0"/>
+        <i3dMapping id="mirror01Decal" node="0>0|3|0|0|12|0"/>
+        <i3dMapping id="mirror02Decal" node="0>0|3|0|0|12|1"/>
+        <i3dMapping id="mirror03Decal" node="0>0|3|0|0|12|2"/>
+        <i3dMapping id="cabinDecalsLight" node="0>0|3|0|0|11|0"/>
         <i3dMapping id="forwarder875_vis" node="0>0|8|5|0"/>
         <i3dMapping id="forwarder875_back_component2" node="1>"/>
         <i3dMapping id="backLeftBoggieJoint" node="1>0|0|0"/>
@@ -1458,10 +1800,8 @@
         <i3dMapping id="grabHydraulicRefFrame" node="1>0|3|4|0|0|0|0|0|0|0|0|4"/>
         <i3dMapping id="grabConnectionArmRefFrame" node="1>0|3|4|0|0|0|0|0|0|0|0|5"/>
         <i3dMapping id="craneCameraRotRef" node="1>0|3|4|0|0|0|0|0|0|0|0|6"/>
-        <i3dMapping id="logGrabTrigger" node="1>0|3|4|0|0|0|0|0|0|0|0|7"/>
-        <i3dMapping id="craneCameraRotRefFrame" node="0>0|1|4"/>
-        <i3dMapping id="craneCameraRot" node="0>0|1|4|0"/>
-        <i3dMapping id="craneCamera" node="0>0|1|4|0|0"/>
+        <i3dMapping id="craneCameraRot" node="1>0|3|4|9|0"/>
+        <i3dMapping id="logGrabTrigger" node="1>0|3|4|0|0|0|0|0|0|0|0|14"/>
         <i3dMapping id="armXRot_lod" node="1>0|3|4|6"/>
         <i3dMapping id="armXRotPhysic" node="1>0|3|5"/>
         <i3dMapping id="mainArmPhysic" node="1>0|3|5|0"/>
@@ -1524,24 +1864,24 @@
         <i3dMapping id="grabArmRotRef" node="6>6"/>
         <i3dMapping id="grabLeftRef" node="7>2"/>
         <i3dMapping id="grabRightRef" node="8>2"/>
-		<i3dMapping id="Front1" node="0>0|3|8|2|0" />
-		<i3dMapping id="Front2" node="0>0|3|8|2|1" />
-		<i3dMapping id="Front3" node="0>0|3|8|2|2" />
-		<i3dMapping id="Front4" node="0>0|3|8|2|3" />
-		<i3dMapping id="Seite1" node="0>0|3|8|2|4" />
-		<i3dMapping id="Seite2" node="0>0|3|8|2|5" />
-		<i3dMapping id="Seite3" node="0>0|3|8|2|6" />
-		<i3dMapping id="Seite4" node="0>0|3|8|2|7" />
-		<i3dMapping id="Seite5" node="0>0|3|8|2|8" />
-		<i3dMapping id="Seite6" node="0>0|3|8|2|9" />
-		<i3dMapping id="Seite7" node="0>0|3|8|2|10" />
-		<i3dMapping id="Seite8" node="0>0|3|8|2|11" />
-		<i3dMapping id="Back1" node="0>0|3|8|2|12" />
-		<i3dMapping id="Back2" node="0>0|3|8|2|13" />
-		<i3dMapping id="Back3" node="0>0|3|8|2|14" />
-		<i3dMapping id="Back4" node="0>0|3|8|2|15" />
-		<i3dMapping id="Back5" node="0>0|3|8|2|16" />
-		<i3dMapping id="Back6" node="0>0|3|8|2|17" />
+		<i3dMapping id="Front1" node="0>0|3|0|0|8|2|0" />
+		<i3dMapping id="Front2" node="0>0|3|0|0|8|2|1" />
+		<i3dMapping id="Front3" node="0>0|3|0|0|8|2|2" />
+		<i3dMapping id="Front4" node="0>0|3|0|0|8|2|3" />
+		<i3dMapping id="Seite1" node="0>0|3|0|0|8|2|4" />
+		<i3dMapping id="Seite2" node="0>0|3|0|0|8|2|5" />
+		<i3dMapping id="Seite3" node="0>0|3|0|0|8|2|6" />
+		<i3dMapping id="Seite4" node="0>0|3|0|0|8|2|7" />
+		<i3dMapping id="Seite5" node="0>0|3|0|0|8|2|8" />
+		<i3dMapping id="Seite6" node="0>0|3|0|0|8|2|9" />
+		<i3dMapping id="Seite7" node="0>0|3|0|0|8|2|10" />
+		<i3dMapping id="Seite8" node="0>0|3|0|0|8|2|11" />
+		<i3dMapping id="Back1" node="0>0|3|0|0|8|2|12" />
+		<i3dMapping id="Back2" node="0>0|3|0|0|8|2|13" />
+		<i3dMapping id="Back3" node="0>0|3|0|0|8|2|14" />
+		<i3dMapping id="Back4" node="0>0|3|0|0|8|2|15" />
+		<i3dMapping id="Back5" node="0>0|3|0|0|8|2|16" />
+		<i3dMapping id="Back6" node="0>0|3|0|0|8|2|17" />
 		<i3dMapping id="Heck1" node="1>0|1|0|0" />
 		<i3dMapping id="Heck2" node="1>0|1|0|1" />
 		<i3dMapping id="Crane1" node="1>0|3|4|0|8|0|0" />

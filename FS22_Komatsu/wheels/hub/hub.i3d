@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="hub.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.6"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="8" filename="$data/shared/wheels/hubs/hub004_normal.png"/>
+    <File fileId="9" filename="$data/shared/wheels/hubs/hub004_vmask.png"/>
+    <File fileId="2" filename="$data/shared/wheels/hubs/hub014_normal.png"/>
+    <File fileId="3" filename="$data/shared/wheels/hubs/hub014_vmask.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="hub004_mat" materialId="323" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="colorMask">
+      <Normalmap fileId="8"/>
+      <Glossmap fileId="9"/>
+      <CustomParameter name="colorMat0" value="0.03 0.03 0.03 0"/>
+      <CustomParameter name="colorMat1" value="0.98 0.98 0.98 8"/>
+      <CustomParameter name="colorMat2" value="0.98 0.98 0.98 0"/>
+    </Material>
+    <Material name="hub014_mat" materialId="5" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="colorMask">
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="colorMat0" value="0.03 0.03 0.03 0"/>
+      <CustomParameter name="colorMat1" value="0.98 0.98 0.98 8"/>
+      <CustomParameter name="colorMat2" value="0.98 0.98 0.98 8"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="hub.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <TransformGroup name="_06_" clipDistance="150" nodeId="9">
+        <Shape shapeId="1" name="left" nodeId="10" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="2" name="right" nodeId="11" materialIds="5" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <TransformGroup name="_15_" nodeId="539">
+        <Shape shapeId="3" name="left" clipDistance="150" nodeId="540" materialIds="323" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="4" name="right" clipDistance="150" nodeId="541" materialIds="323" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+  </Scene>
+
+</i3D>
