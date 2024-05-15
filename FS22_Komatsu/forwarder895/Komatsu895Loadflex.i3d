@@ -334,17 +334,19 @@
                 <TransformGroup name="seatBone" translation="-0.00991074 0.208985 -0.0250693" nodeId="252"/>
                 <Shape shapeId="7" name="seatDecalsLight" translation="0.000216217 0.214985 0.010632" clipDistance="30" nodeId="253" materialIds="15" castsShadows="true" receiveShadows="true" decalLayer="1"/>
               </TransformGroup>
-              <TransformGroup name="craneAlignment" translation="0 1.4 0" nodeId="254">
-                <Camera name="indoorCamera" rotation="0 -5.00896e-06 0" nodeId="255" fov="60" nearClip="0.1" farClip="5000" orthographicHeight="1"/>
+              <TransformGroup name="indoorCamTG" translation="0 1.2 -0.2" nodeId="762">
+                <TransformGroup name="craneAlignment" nodeId="254">
+                  <Camera name="indoorCamera" nodeId="255" fov="60" nearClip="0.1" farClip="5000" orthographicHeight="1"/>
+                </TransformGroup>
+                <TransformGroup name="followCrane" translation="0 0 0.1" nodeId="260">
+                  <TransformGroup name="indoorCameraTarget" nodeId="261"/>
+                </TransformGroup>
               </TransformGroup>
               <TransformGroup name="characterTargets" translation="-0.00991074 -1.93745 -1.78821" nodeId="256">
                 <TransformGroup name="playerRightFootTarget" translation="-0.186026 1.8153 2.09149" rotation="-0.111233 0 0" nodeId="257"/>
                 <TransformGroup name="playerLeftFootTarget" translation="0.109465 1.8153 2.09065" rotation="-0.440295 0 0" nodeId="258"/>
               </TransformGroup>
               <TransformGroup name="seatRotBone" translation="-0.00991074 -0.00246687 0.354552" nodeId="259"/>
-              <TransformGroup name="followCrane" translation="0 1.4 0.1" rotation="0 0 3.21281e-07" nodeId="260">
-                <TransformGroup name="indoorCameraTarget" nodeId="261"/>
-              </TransformGroup>
             </TransformGroup>
             <TransformGroup name="wipers" nodeId="262">
               <TransformGroup name="wiperFrontArm01Rot" translation="0.0277907 3.57797 2.51121" rotation="-13.8494 0.0605427 0.0786967" nodeId="263">
@@ -554,7 +556,7 @@
           <Shape shapeId="79" name="colPart01" translation="0 2.72914 1.73146" compoundChild="true" collisionMask="2105410" density="0.001" nodeId="414" materialIds="33" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
         </TransformGroup>
         <TransformGroup name="workCam" nodeId="415">
-          <Camera name="GE_WORK_CAM" translation="1.47754 1.53542 4.62708" rotation="-15.356 60.1148 3.21281e-07" visibility="false" nodeId="416" fov="60" nearClip="0.1" farClip="10000" orthographicHeight="1"/>
+          <Camera name="GE_WORK_CAM" translation="3.18213 3.275 1.07828" rotation="164.549 87.9445 180" visibility="false" nodeId="416" fov="60" nearClip="0.1" farClip="10000" orthographicHeight="1"/>
         </TransformGroup>
       </Shape>
       <Shape shapeId="80" name="forwarder875_back_component2" translation="0 -1.11022e-16 0" dynamic="true" compound="true" collisionMask="2105410" clipDistance="300" nodeId="417" materialIds="33" castsShadows="true" receiveShadows="true" nonRenderable="true">
